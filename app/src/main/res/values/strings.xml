@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Kotlin Hero</string>
+    <string name="tvProfile">Profile</string>
+    <string name="tvLipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua.
+    </string>
+    <string name="tvSearch">Cari materi Kotlin…</string>
+    <string name="tvIntroduceKotlin">Yuk kenalan dengan bahasa Kotlin</string>
+    <string name="tvStartYourJourney">Mulai belajar Kotlin</string>
+</resources>
