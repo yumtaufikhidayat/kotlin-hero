@@ -13,47 +13,58 @@
         android:layout_height="?actionBarSize"
         android:background="@color/purple_700"
         android:orientation="horizontal"
+        android:padding="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_white"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_search"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
                 android:id="@+id/tvSearch"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
                 android:layout_marginVertical="10dp"
-                android:layout_marginHorizontal="10dp"
-                android:background="@drawable/background_white"
                 android:text="@string/tvSearch"
                 android:textColor="@color/grey"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/imgProfile"/>
-
-            <ImageView
-                android:id="@+id/imgProfile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@null"
-                android:layout_gravity="center"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/ic_outline_person"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground"
-                app:layout_constraintTop_toTopOf="@id/tvSearch"
-                app:layout_constraintBottom_toBottomOf="@id/tvSearch"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintStart_toEndOf="@id/imgSearch"
+                app:layout_constraintTop_toTopOf="@id/imgSearch"
+                app:layout_constraintBottom_toBottomOf="@id/imgSearch"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_outline_person"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"/>
 
     </LinearLayout>
 
@@ -79,7 +90,10 @@
         android:id="@+id/cardAbout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:padding="5dp"
+        app:cardCornerRadius="5dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@+id/imgLogo">
 
@@ -87,7 +101,6 @@
             android:id="@+id/rvAboutKotlin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:overScrollMode="never"
             android:scrollbars="none"
             tools:listitem="@layout/item_about_kotlin"

@@ -39,9 +39,9 @@ class MainActivity : AppCompatActivity() {
         aboutKotlinData = ArrayList()
 
         val list: MutableList<AboutKotlin> = mutableListOf()
-        list.add(AboutKotlin(R.drawable.ic_why, "Mengapa Kotlin?"))
-        list.add(AboutKotlin(R.drawable.ic_docs, "Dokumentasi\nKotlin"))
-        list.add(AboutKotlin(R.drawable.ic_roadmap, "Roadmap Kotlin"))
+        list.add(AboutKotlin(R.drawable.ic_docs, "Dokumentasi Kotlin"))
+        list.add(AboutKotlin(R.drawable.ic_roadmap, "Rilis dan Roadmap"))
+        list.add(AboutKotlin(R.drawable.ic_contribute, "Kontribusi ke Kotlin"))
 
         aboutKotlinData.addAll(list)
     }
