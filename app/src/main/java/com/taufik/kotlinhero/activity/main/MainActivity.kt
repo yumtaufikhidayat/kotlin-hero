@@ -1,11 +1,12 @@
 package com.taufik.kotlinhero.activity.main
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.taufik.kotlinhero.R
+import com.taufik.kotlinhero.activity.profile.ProfileActivity
 import com.taufik.kotlinhero.adapter.about.AboutKotlinAdapter
 import com.taufik.kotlinhero.adapter.category.CategoryAdapter
 import com.taufik.kotlinhero.data.MainCategory
@@ -74,7 +75,8 @@ class MainActivity : AppCompatActivity() {
     private fun setProfileOnClick() {
         binding.apply {
             imgProfile.setOnClickListener{
-                Toast.makeText(this@MainActivity, getString(R.string.tvProfile), Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@MainActivity, ProfileActivity::class.java)
+                startActivity(intent)
             }
         }
     }

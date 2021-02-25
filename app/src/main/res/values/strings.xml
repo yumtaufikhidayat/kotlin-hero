@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Kotlin Hero</string>
-    <string name="tvProfile">Profile</string>
     <string name="tvLipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
         dolore magna aliqua.
@@ -8,4 +7,18 @@
     <string name="tvSearch">Cari materi Kotlin…</string>
     <string name="tvIntroduceKotlin">Yuk kenalan dengan bahasa Kotlin</string>
     <string name="tvStartYourJourney">Mulai belajar Kotlin</string>
+    <string name="tvNull">Null</string>
+    <string name="tvFollowing">Mengikuti</string>
+    <string name="tvFollowingNumber">0</string>
+    <string name="tvFollowers">Pengikut</string>
+    <string name="tvFollowerNumber">0</string>
+    <string name="tvRepository">Repositori</string>
+    <string name="tvRepositoryNumber">0</string>
+    <string name="tvLanguage">Bahasa</string>
+    <string name="tvOtherMenus">Menu Lainnya</string>
+    <string name="tvProfile">Profil</string>
+    <string name="tvShare">Bagikan</string>
+    <string name="tvOpenInBrowser">Buka di Peramban</string>
+    <string name="tvAppInfo">Info Aplikasi</string>
+    <string name="tvInfo">Info</string>
 </resources>
