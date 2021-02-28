@@ -1,9 +1,11 @@
 package com.taufik.kotlinhero.adapter.about
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.taufik.kotlinhero.activity.profile.ProfileActivity
 import com.taufik.kotlinhero.databinding.ItemAboutKotlinBinding
 import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlin
 
@@ -35,7 +37,19 @@ class AboutKotlinAdapter:RecyclerView.Adapter<AboutKotlinAdapter.MyViewHolder>()
         val pos = aboutKotlinList[position]
         holder.bind(pos)
         holder.itemView.setOnClickListener{
-            Toast.makeText(holder.itemView.context, pos.name, Toast.LENGTH_SHORT).show()
+
+            when (position) {
+                 0 -> {
+                    val intent = Intent(holder.itemView.context, ProfileActivity::class.java)
+                    holder.itemView.context.startActivity(intent)
+                }
+
+                1 -> {
+                    Toast.makeText(holder.itemView.context, pos.name, Toast.LENGTH_SHORT).show()
+                }
+
+                else -> Toast.makeText(holder.itemView.context, "Else toast", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
