@@ -39,12 +39,16 @@ class AboutKotlinAdapter:RecyclerView.Adapter<AboutKotlinAdapter.MyViewHolder>()
         holder.itemView.setOnClickListener{
 
             when (position) {
-                 0 -> {
+                0 -> {
                     val intent = Intent(holder.itemView.context, ProfileActivity::class.java)
                     holder.itemView.context.startActivity(intent)
                 }
 
                 1 -> {
+                    Toast.makeText(holder.itemView.context, pos.name, Toast.LENGTH_SHORT).show()
+                }
+
+                2 -> {
                     Toast.makeText(holder.itemView.context, pos.name, Toast.LENGTH_SHORT).show()
                 }
 
