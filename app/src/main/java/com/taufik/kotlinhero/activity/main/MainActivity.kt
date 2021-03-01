@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
     private lateinit var aboutKotlinAdapter: AboutKotlinAdapter
     private lateinit var categoryAdapter: CategoryAdapter
+    private lateinit var introduceKotlinAdapter: CategoryAdapter
     private lateinit var aboutKotlinData: ArrayList<AboutKotlin>
     private lateinit var categoryData: ArrayList<CategoryItem>
 
@@ -25,15 +26,28 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setAboutKotlinData()
+        setData()
 
-        setRecyclerViewAboutKotlin()
+        setRecyclerViewLayout()
+
+        setProfileOnClick()
+    }
+
+    private fun setData() {
+
+        setAboutKotlinData()
 
         setCategoryData()
 
-        setRecyclerViewCategory()
+    }
 
-        setProfileOnClick()
+    private fun setRecyclerViewLayout() {
+
+        setRecyclerViewAboutKotlin()
+
+        setRecyclerViewIntroduceKotlin()
+
+        setRecyclerViewCategory()
     }
 
     private fun setAboutKotlinData() {
@@ -74,6 +88,19 @@ class MainActivity : AppCompatActivity() {
         categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Unit Testing"))
 
         categoryData.addAll(categoryList)
+    }
+
+    private fun setRecyclerViewIntroduceKotlin() {
+
+        introduceKotlinAdapter = CategoryAdapter()
+        introduceKotlinAdapter.notifyDataSetChanged()
+
+        binding.apply {
+            rvIntroduceKotlin.layoutManager = GridLayoutManager(this@MainActivity, 2)
+            rvIntroduceKotlin.setHasFixedSize(true)
+            introduceKotlinAdapter.setDataCategoryList(categoryData)
+            rvIntroduceKotlin.adapter = introduceKotlinAdapter
+        }
     }
 
     private fun setRecyclerViewCategory() {
