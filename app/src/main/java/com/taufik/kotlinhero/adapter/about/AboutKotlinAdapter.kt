@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.taufik.kotlinhero.databinding.ItemAboutKotlinBinding
 import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlin
 
-class AboutKotlinAdapter:RecyclerView.Adapter<AboutKotlinAdapter.MyViewHolder>() {
+class AboutKotlinAdapter : RecyclerView.Adapter<AboutKotlinAdapter.MyViewHolder>() {
 
     private val aboutKotlinList = ArrayList<AboutKotlin>()
 
@@ -20,9 +20,10 @@ class AboutKotlinAdapter:RecyclerView.Adapter<AboutKotlinAdapter.MyViewHolder>()
         notifyDataSetChanged()
     }
 
-    inner class MyViewHolder(private val aboutKotlinBinding: ItemAboutKotlinBinding) : RecyclerView.ViewHolder(aboutKotlinBinding.root) {
+    inner class MyViewHolder(private val aboutKotlinBinding: ItemAboutKotlinBinding) :
+        RecyclerView.ViewHolder(aboutKotlinBinding.root) {
         fun bind(aboutKotlin: AboutKotlin) {
-            aboutKotlinBinding.apply{
+            aboutKotlinBinding.apply {
                 imgAboutKotlin.setImageResource(aboutKotlin.icon)
                 tvAboutKotlinDesc.text = aboutKotlin.name
             }
@@ -30,47 +31,85 @@ class AboutKotlinAdapter:RecyclerView.Adapter<AboutKotlinAdapter.MyViewHolder>()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = ItemAboutKotlinBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val view =
+            ItemAboutKotlinBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MyViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val pos = aboutKotlinList[position]
         holder.bind(pos)
-        holder.itemView.setOnClickListener{
+        holder.itemView.setOnClickListener {
 
             when (position) {
                 0 -> {
                     try {
-                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://kotlinlang.org/docs/home.html"))
-                        holder.itemView.context.startActivity(Intent.createChooser(intent, "Open with:"))
+                        val intent = Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse("https://kotlinlang.org/docs/home.html")
+                        )
+                        holder.itemView.context.startActivity(
+                            Intent.createChooser(
+                                intent,
+                                "Open with:"
+                            )
+                        )
                     } catch (e: Exception) {
-                        Toast.makeText(holder.itemView.context, "Silakan install browser terlebih dulu", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            holder.itemView.context,
+                            "Silakan install browser terlebih dulu",
+                            Toast.LENGTH_SHORT
+                        ).show()
                         Log.e("errorLink", "setViewModel: ${e.localizedMessage}")
                     }
                 }
 
                 1 -> {
                     try {
-                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://kotlinlang.org/docs/coding-conventions.html"))
-                        holder.itemView.context.startActivity(Intent.createChooser(intent, "Open with:"))
+                        val intent = Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse("https://kotlinlang.org/docs/coding-conventions.html")
+                        )
+                        holder.itemView.context.startActivity(
+                            Intent.createChooser(
+                                intent,
+                                "Open with:"
+                            )
+                        )
                     } catch (e: Exception) {
-                        Toast.makeText(holder.itemView.context, "Silakan install browser terlebih dulu", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            holder.itemView.context,
+                            "Silakan install browser terlebih dulu",
+                            Toast.LENGTH_SHORT
+                        ).show()
                         Log.e("errorLink", "setViewModel: ${e.localizedMessage}")
                     }
                 }
 
                 2 -> {
                     try {
-                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://kotlinlang.org/docs/contribute.html"))
-                        holder.itemView.context.startActivity(Intent.createChooser(intent, "Open with:"))
+                        val intent = Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse("https://kotlinlang.org/docs/contribute.html")
+                        )
+                        holder.itemView.context.startActivity(
+                            Intent.createChooser(
+                                intent,
+                                "Open with:"
+                            )
+                        )
                     } catch (e: Exception) {
-                        Toast.makeText(holder.itemView.context, "Silakan install browser terlebih dulu", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            holder.itemView.context,
+                            "Silakan install browser terlebih dulu",
+                            Toast.LENGTH_SHORT
+                        ).show()
                         Log.e("errorLink", "setViewModel: ${e.localizedMessage}")
                     }
                 }
 
-                else -> Toast.makeText(holder.itemView.context, "Else toast", Toast.LENGTH_SHORT).show()
+                else -> Toast.makeText(holder.itemView.context, "Else toast", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
     }

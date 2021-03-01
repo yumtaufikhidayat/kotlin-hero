@@ -112,15 +112,16 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCategoryParent"
+        android:id="@+id/rvCategory"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:clipToPadding="false"
         android:layout_marginTop="20dp"
         android:scrollbars="none"
         android:overScrollMode="never"
-        tools:listitem="@layout/item_category_parent"
-        tools:itemCount="2"
+        tools:listitem="@layout/item_category"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
         app:layout_constraintTop_toBottomOf="@id/cardAbout"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
