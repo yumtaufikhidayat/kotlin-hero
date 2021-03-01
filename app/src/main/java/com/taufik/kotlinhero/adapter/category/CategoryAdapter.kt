@@ -42,7 +42,7 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
         holder.binding.apply {
             cardCategoryChild.setCardBackgroundColor(
                 holder.itemView.context.getColor(
-                    R.color.purple_500
+                    R.color.white
                 )
             )
         }

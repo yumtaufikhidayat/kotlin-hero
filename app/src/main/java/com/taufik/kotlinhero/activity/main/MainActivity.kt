@@ -66,12 +66,12 @@ class MainActivity : AppCompatActivity() {
         categoryData = ArrayList()
 
         val categoryList: MutableList<CategoryItem> = mutableListOf()
-        categoryList.add(CategoryItem(R.drawable.ic_android,"Kotlin Basic"))
-        categoryList.add(CategoryItem(R.drawable.ic_android,"Kotlin OOP"))
-        categoryList.add(CategoryItem(R.drawable.ic_android,"Kotlin Generic"))
-        categoryList.add(CategoryItem(R.drawable.ic_android,"Kotlin Collection"))
-        categoryList.add(CategoryItem(R.drawable.ic_android,"Kotlin Coroutine"))
-        categoryList.add(CategoryItem(R.drawable.ic_android,"Kotlin Unit Testing"))
+        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Basic"))
+        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin OOP"))
+        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Generic"))
+        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Collection"))
+        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Coroutine"))
+        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Unit Testing"))
 
         categoryData.addAll(categoryList)
     }
