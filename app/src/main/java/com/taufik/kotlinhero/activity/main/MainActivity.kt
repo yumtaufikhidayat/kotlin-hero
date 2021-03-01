@@ -80,12 +80,12 @@ class MainActivity : AppCompatActivity() {
         categoryData = ArrayList()
 
         val categoryList: MutableList<CategoryItem> = mutableListOf()
-        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Basic"))
-        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin OOP"))
-        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Generic"))
-        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Collection"))
-        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Coroutine"))
-        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Unit Testing"))
+        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Basic", "42 Materi"))
+        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin OOP", "51 Materi"))
+        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Generic", "16 Materi"))
+        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Collection", "42 Materi"))
+        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Coroutine", "1 Materi"))
+        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Unit Testing", "25 Materi"))
 
         categoryData.addAll(categoryList)
     }
@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
             rvIntroduceKotlin.layoutManager = GridLayoutManager(this@MainActivity, 2)
             rvIntroduceKotlin.setHasFixedSize(true)
             introduceKotlinAdapter.setDataCategoryList(categoryData)
-            rvIntroduceKotlin.adapter = introduceKotlinAdapter
+//            rvIntroduceKotlin.adapter = introduceKotlinAdapter
         }
     }
 

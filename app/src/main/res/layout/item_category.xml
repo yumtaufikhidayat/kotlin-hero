@@ -21,23 +21,21 @@
 
         <LinearLayout
             android:id="@+id/llIconLogo"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/background_purple_700"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
             <ImageView
                 android:id="@+id/imgIcon"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:contentDescription="@null"
-                android:src="@drawable/kotlin_logos"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/tvCategoryName"/>
+                android:src="@drawable/kotlin_logos"/>
             
         </LinearLayout>
 
@@ -47,11 +45,23 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="@string/app_name"
+            android:textSize="16sp"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/llIconLogo"
             app:layout_constraintEnd_toEndOf="@+id/llIconLogo"
-            app:layout_constraintTop_toBottomOf="@+id/llIconLogo"
+            app:layout_constraintTop_toBottomOf="@id/llIconLogo"
+            app:layout_constraintBottom_toTopOf="@+id/tvCategoryNumber"/>
+
+        <TextView
+            android:id="@+id/tvCategoryNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/llIconLogo"
+            app:layout_constraintEnd_toEndOf="@+id/llIconLogo"
+            app:layout_constraintTop_toBottomOf="@+id/tvCategoryName"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

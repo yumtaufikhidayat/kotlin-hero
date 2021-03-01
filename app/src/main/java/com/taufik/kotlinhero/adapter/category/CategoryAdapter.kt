@@ -23,6 +23,7 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
             binding.apply {
                 imgIcon.setImageResource(categoryItem.categoryIcon)
                 tvCategoryName.text = categoryItem.categoryName
+                tvCategoryNumber.text = categoryItem.categoryNumber
                 cardCategoryChild.setOnClickListener {
                     Toast.makeText(itemView.context, categoryItem.categoryName, Toast.LENGTH_SHORT).show()
                 }
