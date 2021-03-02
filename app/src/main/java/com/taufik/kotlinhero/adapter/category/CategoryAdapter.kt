@@ -24,9 +24,6 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
                 imgIcon.setImageResource(categoryItem.categoryIcon)
                 tvCategoryName.text = categoryItem.categoryName
                 tvCategoryNumber.text = categoryItem.categoryNumber
-                cardCategoryChild.setOnClickListener {
-                    Toast.makeText(itemView.context, categoryItem.categoryName, Toast.LENGTH_SHORT).show()
-                }
             }
         }
     }
@@ -49,7 +46,10 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
         }
 
         holder.itemView.setOnClickListener{
-            Toast.makeText(holder.itemView.context, pos.categoryName, Toast.LENGTH_SHORT).show()
+            when (position) {
+                0 -> Toast.makeText(holder.itemView.context, "${pos.categoryName} ${pos.categoryNumber}", Toast.LENGTH_SHORT).show()
+                else -> Toast.makeText(holder.itemView.context, pos.categoryName, Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

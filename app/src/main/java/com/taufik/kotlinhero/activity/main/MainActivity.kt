@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         setRecyclerViewAboutKotlin()
 
-        setRecyclerViewIntroduceKotlin()
+//        setRecyclerViewIntroduceKotlin()
 
         setRecyclerViewCategory()
     }
@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
             rvIntroduceKotlin.layoutManager = GridLayoutManager(this@MainActivity, 2)
             rvIntroduceKotlin.setHasFixedSize(true)
             introduceKotlinAdapter.setDataCategoryList(categoryData)
-//            rvIntroduceKotlin.adapter = introduceKotlinAdapter
+            rvIntroduceKotlin.adapter = introduceKotlinAdapter
         }
     }
 

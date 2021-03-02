@@ -21,4 +21,5 @@
     <string name="tvOpenInBrowser">Buka di Peramban</string>
     <string name="tvAppInfo">Info Aplikasi</string>
     <string name="tvInfo">Info</string>
+    <string name="tvDescription">Deskripsi</string>
 </resources>
