@@ -12,8 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinHero"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.profile.ProfileActivity"
-            android:theme="@style/ActionBarTheme"/>
+        <activity
+            android:name=".activity.learningmaterials.kotlinbasic.KotlinBasicActivity"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name=".activity.profile.ProfileActivity"
+            android:theme="@style/ActionBarTheme" />
         <activity android:name=".activity.main.MainActivity" />
         <activity android:name=".activity.splashscreen.SplashscreenActivity">
             <intent-filter>

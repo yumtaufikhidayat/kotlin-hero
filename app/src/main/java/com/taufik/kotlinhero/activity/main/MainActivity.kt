@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         categoryData = ArrayList()
 
         val categoryList: MutableList<CategoryItem> = mutableListOf()
-        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Basic", "42 Materi"))
+        categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Dasar", "42 Materi"))
         categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin OOP", "51 Materi"))
         categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Generic", "16 Materi"))
         categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Collection", "42 Materi"))

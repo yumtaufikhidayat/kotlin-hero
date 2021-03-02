@@ -1,10 +1,11 @@
 package com.taufik.kotlinhero.adapter.category
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.taufik.kotlinhero.R
+import com.taufik.kotlinhero.activity.learningmaterials.kotlinbasic.KotlinBasicActivity
 import com.taufik.kotlinhero.databinding.ItemCategoryBinding
 import com.taufik.kotlinhero.model.category.CategoryItem
 
@@ -47,8 +48,10 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
 
         holder.itemView.setOnClickListener{
             when (position) {
-                0 -> Toast.makeText(holder.itemView.context, "${pos.categoryName} ${pos.categoryNumber}", Toast.LENGTH_SHORT).show()
-                else -> Toast.makeText(holder.itemView.context, pos.categoryName, Toast.LENGTH_SHORT).show()
+                0 -> {
+                    val intent = Intent(holder.itemView.context, KotlinBasicActivity::class.java)
+                    holder.itemView.context.startActivity(intent)
+                }
             }
         }
     }
