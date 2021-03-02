@@ -37,14 +37,14 @@ class KotlinBasicActivity : AppCompatActivity() {
         val actionBar = supportActionBar
 
         if (actionBar != null) {
-            actionBar.title = "Kotlin Dasar"
+            actionBar.title = "Tutorial Kotlin Dasar"
             actionBar.setDisplayHomeAsUpEnabled(true)
         }
     }
 
     private fun setRecyclerViewKotlinBasic() {
 
-        kotlinBasicData = MainData.kotlinData as ArrayList<LearningMaterialsItem>
+        kotlinBasicData = MainData.kotlinDasarData as ArrayList<LearningMaterialsItem>
         learningMaterialsAdapter = LearningMaterialsAdapter()
 
         binding.apply {
@@ -73,7 +73,7 @@ class KotlinBasicActivity : AppCompatActivity() {
         val searchView = menu?.findItem(R.id.nav_search)?.actionView as SearchView
 
         searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
-        searchView.queryHint = resources.getString(R.string.tvSearch)
+        searchView.queryHint = resources.getString(R.string.tvSearchVideo)
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
                 Toast.makeText(this@KotlinBasicActivity, query, Toast.LENGTH_SHORT).show()
