@@ -8,24 +8,24 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.taufik.kotlinhero.databinding.ItemAboutKotlinBinding
-import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlin
+import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlinItem
 
 class AboutKotlinAdapter : RecyclerView.Adapter<AboutKotlinAdapter.MyViewHolder>() {
 
-    private val aboutKotlinList = ArrayList<AboutKotlin>()
+    private val aboutKotlinList = ArrayList<AboutKotlinItem>()
 
-    fun setDataAboutKotlin(aboutKotlin: ArrayList<AboutKotlin>) {
+    fun setDataAboutKotlin(aboutKotlinItem: ArrayList<AboutKotlinItem>) {
         aboutKotlinList.clear()
-        aboutKotlinList.addAll(aboutKotlin)
+        aboutKotlinList.addAll(aboutKotlinItem)
         notifyDataSetChanged()
     }
 
     inner class MyViewHolder(private val aboutKotlinBinding: ItemAboutKotlinBinding) :
         RecyclerView.ViewHolder(aboutKotlinBinding.root) {
-        fun bind(aboutKotlin: AboutKotlin) {
+        fun bind(aboutKotlinItem: AboutKotlinItem) {
             aboutKotlinBinding.apply {
-                imgAboutKotlin.setImageResource(aboutKotlin.icon)
-                tvAboutKotlinDesc.text = aboutKotlin.name
+                imgAboutKotlin.setImageResource(aboutKotlinItem.icon)
+                tvAboutKotlinDesc.text = aboutKotlinItem.name
             }
         }
     }

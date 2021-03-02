@@ -9,7 +9,7 @@ import com.taufik.kotlinhero.activity.profile.ProfileActivity
 import com.taufik.kotlinhero.adapter.about.AboutKotlinAdapter
 import com.taufik.kotlinhero.adapter.category.CategoryAdapter
 import com.taufik.kotlinhero.databinding.ActivityMainBinding
-import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlin
+import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlinItem
 import com.taufik.kotlinhero.model.category.CategoryItem
 
 class MainActivity : AppCompatActivity() {
@@ -17,8 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
     private lateinit var aboutKotlinAdapter: AboutKotlinAdapter
     private lateinit var categoryAdapter: CategoryAdapter
-    private lateinit var introduceKotlinAdapter: CategoryAdapter
-    private lateinit var aboutKotlinData: ArrayList<AboutKotlin>
+    private lateinit var aboutKotlinItemData: ArrayList<AboutKotlinItem>
     private lateinit var categoryData: ArrayList<CategoryItem>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,21 +44,19 @@ class MainActivity : AppCompatActivity() {
 
         setRecyclerViewAboutKotlin()
 
-//        setRecyclerViewIntroduceKotlin()
-
         setRecyclerViewCategory()
     }
 
     private fun setAboutKotlinData() {
 
-        aboutKotlinData = ArrayList()
+        aboutKotlinItemData = ArrayList()
 
-        val list: MutableList<AboutKotlin> = mutableListOf()
-        list.add(AboutKotlin(R.drawable.ic_docs, "Dokumentasi Kotlin"))
-        list.add(AboutKotlin(R.drawable.ic_convention, "Coding Convention"))
-        list.add(AboutKotlin(R.drawable.ic_contribute, "Kontribusi ke Kotlin"))
+        val list: MutableList<AboutKotlinItem> = mutableListOf()
+        list.add(AboutKotlinItem(R.drawable.ic_docs, "Dokumentasi Kotlin"))
+        list.add(AboutKotlinItem(R.drawable.ic_convention, "Coding Convention"))
+        list.add(AboutKotlinItem(R.drawable.ic_contribute, "Kontribusi ke Kotlin"))
 
-        aboutKotlinData.addAll(list)
+        aboutKotlinItemData.addAll(list)
     }
 
     private fun setRecyclerViewAboutKotlin() {
@@ -70,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             rvAboutKotlin.layoutManager = GridLayoutManager(this@MainActivity, 3)
             rvAboutKotlin.setHasFixedSize(true)
-            aboutKotlinAdapter.setDataAboutKotlin(aboutKotlinData)
+            aboutKotlinAdapter.setDataAboutKotlin(aboutKotlinItemData)
             rvAboutKotlin.adapter = aboutKotlinAdapter
         }
     }
@@ -88,19 +85,6 @@ class MainActivity : AppCompatActivity() {
         categoryList.add(CategoryItem(R.drawable.kotlin_logos,"Kotlin Unit Testing", "25 Materi"))
 
         categoryData.addAll(categoryList)
-    }
-
-    private fun setRecyclerViewIntroduceKotlin() {
-
-        introduceKotlinAdapter = CategoryAdapter()
-        introduceKotlinAdapter.notifyDataSetChanged()
-
-        binding.apply {
-            rvIntroduceKotlin.layoutManager = GridLayoutManager(this@MainActivity, 2)
-            rvIntroduceKotlin.setHasFixedSize(true)
-            introduceKotlinAdapter.setDataCategoryList(categoryData)
-            rvIntroduceKotlin.adapter = introduceKotlinAdapter
-        }
     }
 
     private fun setRecyclerViewCategory() {
