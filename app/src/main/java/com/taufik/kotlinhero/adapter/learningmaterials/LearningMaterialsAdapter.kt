@@ -30,7 +30,6 @@ class LearningMaterialsAdapter:RecyclerView.Adapter<LearningMaterialsAdapter.MyV
             binding.apply {
                 tvIntroduceKotlinTitle.text = learningMaterialsItem.title
                 tvDesc.text = learningMaterialsItem.description
-                tvDocsUrl.text = learningMaterialsItem.documentationUrl
                 tvVideoUrl.text = learningMaterialsItem.videoUrl
             }
         }
@@ -92,25 +91,6 @@ class LearningMaterialsAdapter:RecyclerView.Adapter<LearningMaterialsAdapter.MyV
                 pos.isExpandable = !pos.isExpandable
                 notifyItemChanged(position)
             }
-
-            tvDocsUrl.makeLinks(Pair(pos.documentationUrl, View.OnClickListener {
-                try {
-                    val intent =
-                        Intent(Intent.ACTION_VIEW, Uri.parse(pos.documentationUrl))
-                    holder.itemView.context.startActivity(
-                        Intent.createChooser(
-                            intent,
-                            "Open with:"
-                        )
-                    )
-                } catch (e: Exception) {
-                    Toast.makeText(
-                        holder.itemView.context,
-                        "Silakan install browser terlebih dulu.",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-            }))
 
             tvVideoUrl.makeLinks(Pair(pos.videoUrl, View.OnClickListener {
                 try {

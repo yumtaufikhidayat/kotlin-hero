@@ -12,15 +12,15 @@ import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.taufik.kotlinhero.R
 import com.taufik.kotlinhero.adapter.learningmaterials.LearningMaterialsAdapter
+import com.taufik.kotlinhero.data.MainData
 import com.taufik.kotlinhero.databinding.ActivityKotlinBasicBinding
-import com.taufik.kotlinhero.helper.UrlHelper
 import com.taufik.kotlinhero.model.learningmaterials.LearningMaterialsItem
 
 class KotlinBasicActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityKotlinBasicBinding
     private lateinit var learningMaterialsAdapter: LearningMaterialsAdapter
-    private lateinit var kotlinBasicData: ArrayList<LearningMaterialsItem>
+    private var kotlinBasicData = ArrayList<LearningMaterialsItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,8 +28,6 @@ class KotlinBasicActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initActionBar()
-
-        setKotlinBasicData()
 
         setRecyclerViewKotlinBasic()
     }
@@ -44,60 +42,9 @@ class KotlinBasicActivity : AppCompatActivity() {
         }
     }
 
-    private fun setKotlinBasicData() {
-
-        kotlinBasicData = ArrayList()
-
-        val kotlinData: MutableList<LearningMaterialsItem> = mutableListOf()
-        kotlinData.add(LearningMaterialsItem(
-                "1. Pengenalan Kotlin",
-                "Kotlin adalah bahasa pemrograman modern," +
-                        " disajikan secara statis yang berjalan pada platform " +
-                        "Java Virtual Machine (JVM). Kotlin menggunakan compiler" +
-                        " LLVM yang artinya, dapat dikompilasi ke dalam kode " +
-                        "JavaScript. Bahasa pemrograman yang satu ini banyak " +
-                        "diminati oleh para developer.",
-        UrlHelper.DOCS_KOTLIN_DASAR_1,
-        UrlHelper.VIDEO_KOTLIN_DASAR_1))
-
-        kotlinData.add(LearningMaterialsItem(
-            "2. Pengenalan Kotlin",
-            "Kotlin adalah bahasa pemrograman modern," +
-                    " disajikan secara statis yang berjalan pada platform " +
-                    "Java Virtual Machine (JVM). Kotlin menggunakan compiler" +
-                    " LLVM yang artinya, dapat dikompilasi ke dalam kode " +
-                    "JavaScript. Bahasa pemrograman yang satu ini banyak " +
-                    "diminati oleh para developer.",
-            UrlHelper.DOCS_KOTLIN_DASAR_1,
-            UrlHelper.VIDEO_KOTLIN_DASAR_1))
-
-        kotlinData.add(LearningMaterialsItem(
-                "3. Pengenalan Kotlin",
-                "Kotlin adalah bahasa pemrograman modern," +
-                        " disajikan secara statis yang berjalan pada platform " +
-                        "Java Virtual Machine (JVM). Kotlin menggunakan compiler" +
-                        " LLVM yang artinya, dapat dikompilasi ke dalam kode " +
-                        "JavaScript. Bahasa pemrograman yang satu ini banyak " +
-                        "diminati oleh para developer.",
-                UrlHelper.DOCS_KOTLIN_DASAR_1,
-                UrlHelper.VIDEO_KOTLIN_DASAR_1))
-
-        kotlinData.add(LearningMaterialsItem(
-                "4. Pengenalan Kotlin",
-                "Kotlin adalah bahasa pemrograman modern," +
-                        " disajikan secara statis yang berjalan pada platform " +
-                        "Java Virtual Machine (JVM). Kotlin menggunakan compiler" +
-                        " LLVM yang artinya, dapat dikompilasi ke dalam kode " +
-                        "JavaScript. Bahasa pemrograman yang satu ini banyak " +
-                        "diminati oleh para developer.",
-                UrlHelper.DOCS_KOTLIN_DASAR_1,
-                UrlHelper.VIDEO_KOTLIN_DASAR_1))
-
-        kotlinBasicData.addAll(kotlinData)
-    }
-
     private fun setRecyclerViewKotlinBasic() {
 
+        kotlinBasicData = MainData.kotlinData as ArrayList<LearningMaterialsItem>
         learningMaterialsAdapter = LearningMaterialsAdapter()
 
         binding.apply {
