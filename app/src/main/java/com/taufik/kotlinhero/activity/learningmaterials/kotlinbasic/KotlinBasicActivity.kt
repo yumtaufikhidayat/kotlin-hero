@@ -12,7 +12,7 @@ import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.taufik.kotlinhero.R
 import com.taufik.kotlinhero.adapter.learningmaterials.LearningMaterialsAdapter
-import com.taufik.kotlinhero.data.MainData
+import com.taufik.kotlinhero.data.KotlinBasic
 import com.taufik.kotlinhero.databinding.ActivityKotlinBasicBinding
 import com.taufik.kotlinhero.model.learningmaterials.LearningMaterialsItem
 
@@ -44,7 +44,7 @@ class KotlinBasicActivity : AppCompatActivity() {
 
     private fun setRecyclerViewKotlinBasic() {
 
-        kotlinBasicData = MainData.kotlinDasarData as ArrayList<LearningMaterialsItem>
+        kotlinBasicData = KotlinBasic.kotlinDasarData as ArrayList<LearningMaterialsItem>
         learningMaterialsAdapter = LearningMaterialsAdapter()
 
         binding.apply {

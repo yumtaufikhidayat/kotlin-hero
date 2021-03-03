@@ -90,12 +90,12 @@ class LearningMaterialsAdapter:RecyclerView.Adapter<LearningMaterialsAdapter.MyV
 
             val isChecked: Boolean
             
-            if (isExpandable) {
-                toggleExpand.isChecked = true
-                isChecked = true
-            } else {
+            if (!isExpandable) {
                 toggleExpand.isChecked = false
                 isChecked = false
+            } else {
+                toggleExpand.isChecked = true
+                isChecked = true
             }
 
             toggleExpand.setOnClickListener{
