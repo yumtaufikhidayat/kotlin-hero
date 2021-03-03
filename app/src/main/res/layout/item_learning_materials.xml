@@ -14,7 +14,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="8dp">
+        android:padding="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
 
         <TextView
             android:id="@+id/tvIntroduceKotlinTitleNumber"
@@ -101,6 +104,8 @@
                 android:layout_marginStart="5dp"
                 android:text="@string/app_name"
                 android:textColor="@color/black"
+                android:maxLines="1"
+                android:ellipsize="end"
                 app:layout_constraintTop_toTopOf="@+id/imgVideo"
                 app:layout_constraintBottom_toBottomOf="@+id/imgVideo"
                 app:layout_constraintStart_toEndOf="@+id/imgVideo"/>

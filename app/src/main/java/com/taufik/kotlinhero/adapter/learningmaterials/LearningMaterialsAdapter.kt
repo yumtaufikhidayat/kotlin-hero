@@ -98,7 +98,17 @@ class LearningMaterialsAdapter:RecyclerView.Adapter<LearningMaterialsAdapter.MyV
                 isChecked = true
             }
 
-            toggleExpand.setOnClickListener{
+            toggleExpand.setOnClickListener {
+                pos.isExpandable = !pos.isExpandable
+                if (isChecked) {
+                    pos.isExpandable
+                } else {
+                    !pos.isExpandable
+                }
+                notifyItemChanged(position)
+            }
+
+            constraintIntroduce.setOnClickListener {
                 pos.isExpandable = !pos.isExpandable
                 if (isChecked) {
                     pos.isExpandable
