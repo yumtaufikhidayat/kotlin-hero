@@ -17,22 +17,37 @@
         android:padding="8dp">
 
         <TextView
-            android:id="@+id/tvIntroduceKotlinTitle"
+            android:id="@+id/tvIntroduceKotlinTitleNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
+            android:text="@string/tvOne"
             android:textColor="@color/purple_700"
             android:textStyle="bold"
             android:textSize="16sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <ImageView
-            android:id="@+id/imgArrowDropdown"
+        <TextView
+            android:id="@+id/tvIntroduceKotlinTitleName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@null"
-            android:src="@drawable/ic_arrow_down"
+            android:layout_marginStart="5dp"
+            android:text="@string/app_name"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@+id/tvIntroduceKotlinTitleNumber"
+            app:layout_constraintBottom_toBottomOf="@+id/tvIntroduceKotlinTitleNumber"
+            app:layout_constraintStart_toEndOf="@+id/tvIntroduceKotlinTitleNumber"/>
+
+        <ToggleButton
+            android:id="@+id/toggleExpand"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:textOn=""
+            android:textOff=""
+            android:focusableInTouchMode="false"
+            android:background="@drawable/expanded_toggle"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?attr/selectableItemBackground"
@@ -45,7 +60,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:visibility="visible"
-            app:layout_constraintTop_toBottomOf="@id/tvIntroduceKotlinTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvIntroduceKotlinTitleName"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 

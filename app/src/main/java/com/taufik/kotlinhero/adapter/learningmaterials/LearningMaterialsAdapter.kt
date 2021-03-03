@@ -28,7 +28,8 @@ class LearningMaterialsAdapter:RecyclerView.Adapter<LearningMaterialsAdapter.MyV
 
         fun bind(learningMaterialsItem: LearningMaterialsItem) {
             binding.apply {
-                tvIntroduceKotlinTitle.text = learningMaterialsItem.title
+                tvIntroduceKotlinTitleNumber.text = learningMaterialsItem.titleNumber
+                tvIntroduceKotlinTitleName.text = learningMaterialsItem.titleName
                 tvDesc.text = learningMaterialsItem.description
                 tvVideoUrl.text = learningMaterialsItem.videoUrl
             }
@@ -87,8 +88,23 @@ class LearningMaterialsAdapter:RecyclerView.Adapter<LearningMaterialsAdapter.MyV
                         View.GONE
                     }
 
-            imgArrowDropdown.setOnClickListener{
+            val isChecked: Boolean
+            
+            if (isExpandable) {
+                toggleExpand.isChecked = true
+                isChecked = true
+            } else {
+                toggleExpand.isChecked = false
+                isChecked = false
+            }
+
+            toggleExpand.setOnClickListener{
                 pos.isExpandable = !pos.isExpandable
+                if (isChecked) {
+                    pos.isExpandable
+                } else {
+                    !pos.isExpandable
+                }
                 notifyItemChanged(position)
             }
 

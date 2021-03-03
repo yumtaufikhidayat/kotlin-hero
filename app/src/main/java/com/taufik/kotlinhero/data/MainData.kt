@@ -32,31 +32,36 @@ class MainData {
         val kotlinDasarData: List<LearningMaterialsItem>
             get() = mutableListOf(
                 LearningMaterialsItem(
-                    "1. Pengenalan Kotlin",
+                    "1. ",
+                    "Pengenalan Kotlin",
                     "Pada video kali ini akan dibahas tentang ",
                     UrlHelper.VIDEO_KOTLIN_DASAR_1
                 ),
 
                 LearningMaterialsItem(
-                    "2. Program Hello World",
+                    "2. ",
+                    "Program Hello World",
                     "Pada video kali ini akan dibahas tentang ",
                     UrlHelper.VIDEO_KOTLIN_DASAR_2
                 ),
 
                 LearningMaterialsItem(
-                    "3. Tipe Data Number",
+                    "3. ",
+                    "Tipe Data Number",
                     "Pada video kali ini akan dibahas tentang ",
                     UrlHelper.VIDEO_KOTLIN_DASAR_3
                 ),
 
                 LearningMaterialsItem(
-                    "4. Tipe Data Character",
+                    "4. ",
+                    "Tipe Data Character",
                     "Pada video kali ini akan dibahas tentang ",
                     UrlHelper.VIDEO_KOTLIN_DASAR_4
                 ),
 
                 LearningMaterialsItem(
-                    "5. Tipe Data Boolean",
+                    "5. ",
+                    "Tipe Data Boolean",
                     "Pada video kali ini akan dibahas tentang ",
                     UrlHelper.VIDEO_KOTLIN_DASAR_5
                 )
