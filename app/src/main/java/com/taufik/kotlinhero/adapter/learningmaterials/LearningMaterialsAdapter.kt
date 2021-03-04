@@ -28,10 +28,11 @@ class LearningMaterialsAdapter:RecyclerView.Adapter<LearningMaterialsAdapter.MyV
 
         fun bind(learningMaterialsItem: LearningMaterialsItem) {
             binding.apply {
-                tvIntroduceKotlinTitleNumber.text = learningMaterialsItem.titleNumber
-                tvIntroduceKotlinTitleName.text = learningMaterialsItem.titleName
+                tvLearningMaterialsTitleNumber.text = learningMaterialsItem.titleNumber
+                tvLearningMaterialsTitleName.text = learningMaterialsItem.titleName
                 tvDesc.text = learningMaterialsItem.description
-                tvVideoUrl.text = learningMaterialsItem.videoUrl
+                tvVideoUrlLearningMaterials.text = learningMaterialsItem.videoUrl
+                videoLearningMaterials.settings.javaScriptEnabled = true
             }
         }
     }
@@ -81,7 +82,7 @@ class LearningMaterialsAdapter:RecyclerView.Adapter<LearningMaterialsAdapter.MyV
         val isExpandable: Boolean = pos.isExpandable
 
         holder.binding.apply {
-            expandableIntroduceKotlinLayout.visibility =
+            expandableLearningMaterialsLayout.visibility =
                     if (isExpandable) {
                         View.VISIBLE
                     } else {
@@ -108,7 +109,7 @@ class LearningMaterialsAdapter:RecyclerView.Adapter<LearningMaterialsAdapter.MyV
                 notifyItemChanged(position)
             }
 
-            constraintIntroduce.setOnClickListener {
+            constraintLearningMaterials.setOnClickListener {
                 pos.isExpandable = !pos.isExpandable
                 if (isChecked) {
                     pos.isExpandable
@@ -118,7 +119,25 @@ class LearningMaterialsAdapter:RecyclerView.Adapter<LearningMaterialsAdapter.MyV
                 notifyItemChanged(position)
             }
 
-            tvVideoUrl.makeLinks(Pair(pos.videoUrl, View.OnClickListener {
+            videoLearningMaterials.loadData(pos.embedVideoUrl, "text/html" , "utf-8")
+
+//            val mediaController = MediaController(holder.itemView.context)
+//            mediaController.setAnchorView(videoLearningMaterials)
+//
+//            val onlineUrl = Uri.parse(pos.embedVideoUrl)
+//            videoLearningMaterials.setMediaController(mediaController)
+//            videoLearningMaterials.setVideoURI(onlineUrl)
+//            videoLearningMaterials.requestFocus()
+
+//            videoLearningMaterials.addYouTubePlayerListener(object :
+//                AbstractYouTubePlayerListener() {
+//                override fun onReady(youTubePlayer: YouTubePlayer) {
+//                    val videoId = pos.embedVideoUrl
+//                    youTubePlayer.loadVideo(videoId, 0F)
+//                }
+//            })
+
+            tvVideoUrlLearningMaterials.makeLinks(Pair(pos.videoUrl, View.OnClickListener {
                 try {
                     val intent =
                         Intent(Intent.ACTION_VIEW, Uri.parse(pos.videoUrl))

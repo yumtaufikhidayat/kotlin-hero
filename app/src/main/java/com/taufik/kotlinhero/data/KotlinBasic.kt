@@ -10,16 +10,10 @@ class KotlinBasic {
         val kotlinDasarData: List<LearningMaterialsItem>
             get() = mutableListOf(
                 LearningMaterialsItem(
-                    "0. ",
-                    KotlinBasicHelper.TITLE_NAME_PLAYLIST,
-                    "Pada video kali ini akan dibahas tentang ",
-                    KotlinBasicHelper.VIDEO_KOTLIN_DASAR_PLAYLIST
-                ),
-
-                LearningMaterialsItem(
                     "1. ",
                     KotlinBasicHelper.TITLE_NAME_1,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_1,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_1
                 ),
 
@@ -27,6 +21,7 @@ class KotlinBasic {
                     "2. ",
                     KotlinBasicHelper.TITLE_NAME_2,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_2,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_2
                 ),
 
@@ -34,6 +29,7 @@ class KotlinBasic {
                     "3. ",
                     KotlinBasicHelper.TITLE_NAME_3,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_3,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_3
                 ),
 
@@ -41,6 +37,7 @@ class KotlinBasic {
                     "4. ",
                     KotlinBasicHelper.TITLE_NAME_4,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_4,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_4
                 ),
 
@@ -48,6 +45,7 @@ class KotlinBasic {
                     "5. ",
                     KotlinBasicHelper.TITLE_NAME_5,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_5,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_5
                 ),
 
@@ -55,6 +53,7 @@ class KotlinBasic {
                     "6. ",
                     KotlinBasicHelper.TITLE_NAME_6,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_6,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_6
                 ),
 
@@ -62,6 +61,7 @@ class KotlinBasic {
                     "7. ",
                     KotlinBasicHelper.TITLE_NAME_7,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_7,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_7
                 ),
 
@@ -69,6 +69,7 @@ class KotlinBasic {
                     "8. ",
                     KotlinBasicHelper.TITLE_NAME_8,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_8,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_8
                 ),
 
@@ -76,6 +77,7 @@ class KotlinBasic {
                     "9. ",
                     KotlinBasicHelper.TITLE_NAME_9,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_9,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_9
                 ),
 
@@ -83,6 +85,7 @@ class KotlinBasic {
                     "10. ",
                     KotlinBasicHelper.TITLE_NAME_10,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_10,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_10
                 ),
 
@@ -90,6 +93,7 @@ class KotlinBasic {
                     "11. ",
                     KotlinBasicHelper.TITLE_NAME_11,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_11,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_11
                 ),
 
@@ -97,6 +101,7 @@ class KotlinBasic {
                     "12. ",
                     KotlinBasicHelper.TITLE_NAME_12,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_12,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_12
                 ),
 
@@ -104,6 +109,7 @@ class KotlinBasic {
                     "13. ",
                     KotlinBasicHelper.TITLE_NAME_13,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_13,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_13
                 ),
 
@@ -111,6 +117,7 @@ class KotlinBasic {
                     "14. ",
                     KotlinBasicHelper.TITLE_NAME_14,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_14,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_14
                 ),
 
@@ -118,6 +125,7 @@ class KotlinBasic {
                     "15. ",
                     KotlinBasicHelper.TITLE_NAME_15,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_15,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_15
                 ),
 
@@ -125,6 +133,7 @@ class KotlinBasic {
                     "16. ",
                     KotlinBasicHelper.TITLE_NAME_16,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_16,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_16
                 ),
 
@@ -132,6 +141,7 @@ class KotlinBasic {
                     "17. ",
                     KotlinBasicHelper.TITLE_NAME_17,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_17,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_17
                 ),
 
@@ -139,6 +149,7 @@ class KotlinBasic {
                     "18. ",
                     KotlinBasicHelper.TITLE_NAME_18,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_18,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_18
                 ),
 
@@ -146,6 +157,7 @@ class KotlinBasic {
                     "19. ",
                     KotlinBasicHelper.TITLE_NAME_19,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_19,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_19
                 ),
 
@@ -153,6 +165,7 @@ class KotlinBasic {
                     "20. ",
                     KotlinBasicHelper.TITLE_NAME_20,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_20,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_20
                 ),
 
@@ -160,6 +173,7 @@ class KotlinBasic {
                     "21. ",
                     KotlinBasicHelper.TITLE_NAME_21,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_21,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_21
                 ),
 
@@ -167,6 +181,7 @@ class KotlinBasic {
                     "22. ",
                     KotlinBasicHelper.TITLE_NAME_22,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_22,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_22
                 ),
 
@@ -174,6 +189,7 @@ class KotlinBasic {
                     "23. ",
                     KotlinBasicHelper.TITLE_NAME_23,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_23,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_23
                 ),
 
@@ -181,6 +197,7 @@ class KotlinBasic {
                     "24. ",
                     KotlinBasicHelper.TITLE_NAME_24,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_24,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_24
                 ),
 
@@ -188,6 +205,7 @@ class KotlinBasic {
                     "25. ",
                     KotlinBasicHelper.TITLE_NAME_25,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_25,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_25
                 ),
 
@@ -195,6 +213,7 @@ class KotlinBasic {
                     "26. ",
                     KotlinBasicHelper.TITLE_NAME_26,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_26,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_26
                 ),
 
@@ -202,6 +221,7 @@ class KotlinBasic {
                     "27. ",
                     KotlinBasicHelper.TITLE_NAME_27,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_27,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_27
                 ),
 
@@ -209,6 +229,7 @@ class KotlinBasic {
                     "28. ",
                     KotlinBasicHelper.TITLE_NAME_28,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_28,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_28
                 ),
 
@@ -216,6 +237,7 @@ class KotlinBasic {
                     "29. ",
                     KotlinBasicHelper.TITLE_NAME_29,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_29,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_29
                 ),
 
@@ -223,6 +245,7 @@ class KotlinBasic {
                     "30. ",
                     KotlinBasicHelper.TITLE_NAME_30,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_30,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_30
                 ),
 
@@ -230,6 +253,7 @@ class KotlinBasic {
                     "31. ",
                     KotlinBasicHelper.TITLE_NAME_31,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_31,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_31
                 ),
 
@@ -237,6 +261,7 @@ class KotlinBasic {
                     "32. ",
                     KotlinBasicHelper.TITLE_NAME_32,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_32,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_32
                 ),
 
@@ -244,6 +269,7 @@ class KotlinBasic {
                     "33. ",
                     KotlinBasicHelper.TITLE_NAME_33,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_33,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_33
                 ),
 
@@ -251,6 +277,7 @@ class KotlinBasic {
                     "34. ",
                     KotlinBasicHelper.TITLE_NAME_34,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_34,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_34
                 ),
 
@@ -258,6 +285,7 @@ class KotlinBasic {
                     "35. ",
                     KotlinBasicHelper.TITLE_NAME_35,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_35,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_35
                 ),
 
@@ -265,6 +293,7 @@ class KotlinBasic {
                     "36. ",
                     KotlinBasicHelper.TITLE_NAME_36,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_36,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_36
                 ),
 
@@ -272,6 +301,7 @@ class KotlinBasic {
                     "37. ",
                     KotlinBasicHelper.TITLE_NAME_37,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_37,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_37
                 ),
 
@@ -279,6 +309,7 @@ class KotlinBasic {
                     "38. ",
                     KotlinBasicHelper.TITLE_NAME_38,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_38,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_38
                 ),
 
@@ -286,6 +317,7 @@ class KotlinBasic {
                     "39. ",
                     KotlinBasicHelper.TITLE_NAME_39,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_39,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_39
                 ),
 
@@ -293,6 +325,7 @@ class KotlinBasic {
                     "40. ",
                     KotlinBasicHelper.TITLE_NAME_40,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_40,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_40
                 ),
 
@@ -300,6 +333,7 @@ class KotlinBasic {
                     "41. ",
                     KotlinBasicHelper.TITLE_NAME_41,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_41,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_41
                 ),
 
@@ -307,6 +341,7 @@ class KotlinBasic {
                     "42. ",
                     KotlinBasicHelper.TITLE_NAME_42,
                     "Pada video kali ini akan dibahas tentang ",
+                    KotlinBasicHelper.EMBED_VIDEO_KOTLIN_DASAR_42,
                     KotlinBasicHelper.VIDEO_KOTLIN_DASAR_42
                 )
             )
