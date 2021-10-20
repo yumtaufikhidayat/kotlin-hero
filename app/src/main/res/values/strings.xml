@@ -5,7 +5,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
         dolore magna aliqua.
     </string>
-    <string name="tvSearch">Cari</string>
+    <string name="tvSearch">Cari…</string>
     <string name="tvSearchVideo">Cari video tutorial…</string>
     <string name="tvIntroduceKotlin">Tentang Kotlin</string>
     <string name="tvTutorial">Tutorial</string>
