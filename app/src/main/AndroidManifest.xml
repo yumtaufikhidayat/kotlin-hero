@@ -16,12 +16,18 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".activity.learningmaterials.kotlinbasic.KotlinBasicActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
             android:name=".activity.profile.ProfileActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
-        <activity android:name=".activity.main.MainActivity" />
-        <activity android:name=".activity.splashscreen.SplashscreenActivity">
+        <activity
+            android:name=".activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.splashscreen.SplashscreenActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
