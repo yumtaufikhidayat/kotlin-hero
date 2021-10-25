@@ -11,9 +11,33 @@
         <!-- Primary brand color. -->
         <item name="titleTextColor">@color/white</item>
         <item name="android:editTextColor">@android:color/white</item>
-        <item name="android:textColorHint">@color/grey</item>
+        <item name="android:textColorHint">@color/colorGrey</item>
         <item name="colorPrimary">@color/purple_700</item>
         <item name="android:statusBarColor">@color/purple_700</item>
         <item name="android:homeAsUpIndicator">@drawable/ic_arrow_back</item>
     </style>
+
+    <!--Bottom navigation view-->
+    <style name="BottomNavigationView">
+        <item name="itemTextAppearanceActive">@style/TextAppearance.BottomNavigationView.Active</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.BottomNavigationView.Inactive</item>
+    </style>
+
+    <style name="TextAppearance"/>
+    <style name="TextAppearance.BottomNavigationView"/>
+
+    <style name="TextAppearance.BottomNavigationView.Inactive">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="colorPrimary">@color/purple_700</item>
+    </style>
+
+    <style name="TextAppearance.BottomNavigationView.Active">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="colorPrimary">@color/purple_700</item>
+        <item name="colorPrimaryDark">@color/purple_500</item>
+        <item name="colorAccent">@color/purple_500</item>
+    </style>
+
 </resources>

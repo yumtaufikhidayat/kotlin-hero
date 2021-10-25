@@ -25,4 +25,10 @@
     <string name="tvAppInfo">Info Aplikasi</string>
     <string name="tvInfo">Info</string>
     <string name="tvDescription">Deskripsi</string>
+
+    <!--Bottom Menu-->
+    <string name="icHome">Beranda</string>
+    <string name="icFavorite">Favorit</string>
+    <string name="icAbout">Tentang</string>
+
 </resources>
