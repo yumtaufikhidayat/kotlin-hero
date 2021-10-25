@@ -1,12 +1,12 @@
-package com.taufik.kotlinhero.activity.main
+package com.taufik.kotlinhero.ui.activity.main
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.taufik.kotlinhero.activity.profile.ProfileActivity
-import com.taufik.kotlinhero.adapter.about.AboutKotlinAdapter
-import com.taufik.kotlinhero.adapter.category.CategoryAdapter
+import com.taufik.kotlinhero.ui.adapter.about.AboutKotlinAdapter
+import com.taufik.kotlinhero.ui.adapter.category.CategoryAdapter
 import com.taufik.kotlinhero.data.MainData
 import com.taufik.kotlinhero.databinding.ActivityMainBinding
 import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlinItem

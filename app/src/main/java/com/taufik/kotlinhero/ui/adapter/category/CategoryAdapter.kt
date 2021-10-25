@@ -1,4 +1,4 @@
-package com.taufik.kotlinhero.adapter.category
+package com.taufik.kotlinhero.ui.adapter.category
 
 import android.content.Intent
 import android.view.LayoutInflater

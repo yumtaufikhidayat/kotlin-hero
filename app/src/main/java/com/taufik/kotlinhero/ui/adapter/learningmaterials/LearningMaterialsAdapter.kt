@@ -1,4 +1,4 @@
-package com.taufik.kotlinhero.adapter.learningmaterials
+package com.taufik.kotlinhero.ui.adapter.learningmaterials
 
 import android.content.Intent
 import android.net.Uri

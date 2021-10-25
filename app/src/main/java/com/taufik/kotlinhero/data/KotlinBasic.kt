@@ -1,6 +1,6 @@
 package com.taufik.kotlinhero.data
 
-import com.taufik.kotlinhero.helper.KotlinBasicHelper
+import com.taufik.kotlinhero.utils.KotlinBasicHelper
 import com.taufik.kotlinhero.model.learningmaterials.LearningMaterialsItem
 
 class KotlinBasic {

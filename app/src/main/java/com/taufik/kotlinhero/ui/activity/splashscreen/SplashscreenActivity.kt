@@ -1,11 +1,11 @@
-package com.taufik.kotlinhero.activity.splashscreen
+package com.taufik.kotlinhero.ui.activity.splashscreen
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import com.taufik.kotlinhero.activity.main.MainActivity
+import com.taufik.kotlinhero.ui.activity.main.MainActivity
 import com.taufik.kotlinhero.databinding.ActivitySplashscreenBinding
 
 class SplashscreenActivity : AppCompatActivity() {

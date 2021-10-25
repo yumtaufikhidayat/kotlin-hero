@@ -1,4 +1,4 @@
-package com.taufik.kotlinhero.helper
+package com.taufik.kotlinhero.utils
 
 object KotlinBasicHelper {
 

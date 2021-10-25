@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.taufik.kotlinhero.R
-import com.taufik.kotlinhero.adapter.learningmaterials.LearningMaterialsAdapter
+import com.taufik.kotlinhero.ui.adapter.learningmaterials.LearningMaterialsAdapter
 import com.taufik.kotlinhero.data.KotlinBasic
 import com.taufik.kotlinhero.databinding.ActivityKotlinBasicBinding
 import com.taufik.kotlinhero.model.learningmaterials.LearningMaterialsItem

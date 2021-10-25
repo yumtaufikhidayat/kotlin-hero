@@ -1,4 +1,4 @@
-package com.taufik.kotlinhero.adapter.about
+package com.taufik.kotlinhero.ui.adapter.about
 
 import android.content.Intent
 import android.net.Uri
