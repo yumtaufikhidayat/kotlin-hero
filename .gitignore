@@ -3,6 +3,8 @@
 
 # Log file
 *.log
+*.lock
+*.bin
 
 # BlueJ files
 *.ctxt
@@ -56,6 +58,9 @@ out/
 
 # Gradle files
 .gradle/
+.gradle/7.0.2/executionHistory/executionHistory.lock
+.gradle/7.0.2/fileHashes/fileHashes.bin
+.gradle/7.0.2/fileHashes/fileHashes.lock
 build/
 
 # Local configuration file (sdk path, etc)
