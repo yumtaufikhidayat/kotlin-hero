@@ -59,7 +59,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="132dp"
+        android:layout_height="136dp"
         android:background="@drawable/background_wave"
         app:layout_constraintTop_toTopOf="parent"/>
 
