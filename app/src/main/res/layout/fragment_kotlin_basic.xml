@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:text="@string/tvKotlinBasic"
             android:textColor="@color/purple_700"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.45"
             app:layout_constraintStart_toEndOf="@id/cardBack"
@@ -55,13 +55,66 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <LinearLayout
+        android:id="@+id/llSearch"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbarBasic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:baselineAligned="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_grey"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_search_grey"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <EditText
+                android:id="@+id/tvSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginStart="5dp"
+                android:layout_marginVertical="10dp"
+                android:autofillHints="@string/tvSearch"
+                android:hint="@string/tvSearch"
+                android:textColorHint="@color/colorGrey"
+                android:textColor="@color/purple_700"
+                android:inputType="text"
+                app:layout_constraintStart_toEndOf="@id/imgSearch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/imgSearch"
+                app:layout_constraintBottom_toBottomOf="@id/imgSearch" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvKotlinBasic"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="12dp"
         tools:listitem="@layout/item_learning_materials"
-        app:layout_constraintTop_toBottomOf="@id/toolbarBasic"
+        app:layout_constraintTop_toBottomOf="@id/llSearch"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
