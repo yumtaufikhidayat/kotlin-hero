@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import com.taufik.kotlinhero.data.MainData
 import com.taufik.kotlinhero.databinding.FragmentHomeBinding
 import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlinItem
