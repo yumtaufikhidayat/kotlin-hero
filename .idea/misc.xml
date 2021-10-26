@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/bottom_navigation_selector.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_arrow_back_ios.xml" value="0.1256578947368421" />
         <entry key="app/src/main/res/drawable/ic_baseline_about.xml" value="0.11527777777777778" />
         <entry key="app/src/main/res/drawable/ic_baseline_favorite.xml" value="0.11527777777777778" />
         <entry key="app/src/main/res/drawable/ic_baseline_home.xml" value="0.1256578947368421" />
@@ -11,13 +12,16 @@
         <entry key="app/src/main/res/drawable/ic_outline_about.xml" value="0.11527777777777778" />
         <entry key="app/src/main/res/drawable/ic_outline_favorite.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_outline_home.xml" value="0.12171052631578948" />
+        <entry key="app/src/main/res/drawable/ic_search_purple.xml" value="0.1256578947368421" />
         <entry key="app/src/main/res/drawable/nav_about_selector.xml" value="0.11527777777777778" />
         <entry key="app/src/main/res/drawable/nav_favorite_selector.xml" value="0.11527777777777778" />
         <entry key="app/src/main/res/drawable/nav_home_selector.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_kotlin_basic.xml" value="0.11180555555555556" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/fragment_kotlin_basic.xml" value="0.14" />
         <entry key="app/src/main/res/layout/fragment_kotlin_collection.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/layout/fragment_kotlin_coroutine.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/layout/fragment_kotlin_dasar.xml" value="0.11546052631578947" />

@@ -1,11 +1,10 @@
 package com.taufik.kotlinhero.ui.home
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.taufik.kotlinhero.R
-import com.taufik.kotlinhero.activity.learningmaterials.kotlinbasic.KotlinBasicActivity
 import com.taufik.kotlinhero.databinding.ItemCategoryBinding
 import com.taufik.kotlinhero.model.category.CategoryItem
 
@@ -49,8 +48,8 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
         holder.itemView.setOnClickListener{
             when (position) {
                 0 -> {
-                    val intent = Intent(holder.itemView.context, KotlinBasicActivity::class.java)
-                    holder.itemView.context.startActivity(intent)
+                    val actionToKotlinBasic = Navigation.createNavigateOnClickListener(R.id.action_nav_home_to_kotlinBasicFragment)
+                    actionToKotlinBasic.onClick(holder.itemView)
                 }
             }
         }
