@@ -51,6 +51,11 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
                     val actionToKotlinBasic = Navigation.createNavigateOnClickListener(R.id.action_nav_home_to_kotlinBasicFragment)
                     actionToKotlinBasic.onClick(holder.itemView)
                 }
+
+                1 -> {
+                    val actionToKotlinOOP = Navigation.createNavigateOnClickListener(R.id.action_nav_home_to_kotlinOOPFragment)
+                    actionToKotlinOOP.onClick(holder.itemView)
+                }
             }
         }
     }

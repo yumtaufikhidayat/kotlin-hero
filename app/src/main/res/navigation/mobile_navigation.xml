@@ -82,7 +82,7 @@
         android:label="fragment_kotlin_oop"
         tools:layout="@layout/fragment_kotlin_oop" >
         <action
-            android:id="@+id/action_kotlinOOPFragment_to_nav_home2"
+            android:id="@+id/action_kotlinOOPFragment_to_nav_home"
             app:destination="@id/nav_home"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
