@@ -7,61 +7,61 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.HomeFragment">
 
-    <LinearLayout
-        android:id="@+id/llMain"
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:background="@color/purple_700"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:baselineAligned="false">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/llMain"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?actionBarSize"-->
+<!--        android:background="@color/purple_700"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="10dp"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:baselineAligned="false">-->
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/background_white"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground">
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/background_white"-->
+<!--            android:clickable="true"-->
+<!--            android:focusable="true"-->
+<!--            android:foreground="?attr/selectableItemBackground">-->
 
-            <ImageView
-                android:id="@+id/imgSearch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_search_grey"
-                android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+<!--            <ImageView-->
+<!--                android:id="@+id/imgSearch"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:contentDescription="@null"-->
+<!--                android:src="@drawable/ic_search_grey"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"/>-->
 
-            <TextView
-                android:id="@+id/tvSearch"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="5dp"
-                android:layout_marginVertical="10dp"
-                android:text="@string/tvSearch"
-                android:textColor="@color/colorGrey"
-                app:layout_constraintStart_toEndOf="@id/imgSearch"
-                app:layout_constraintTop_toTopOf="@id/imgSearch"
-                app:layout_constraintBottom_toBottomOf="@id/imgSearch"/>
+<!--            <TextView-->
+<!--                android:id="@+id/tvSearch"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginVertical="10dp"-->
+<!--                android:text="@string/tvSearch"-->
+<!--                android:textColor="@color/colorGrey"-->
+<!--                app:layout_constraintStart_toEndOf="@id/imgSearch"-->
+<!--                app:layout_constraintTop_toTopOf="@id/imgSearch"-->
+<!--                app:layout_constraintBottom_toBottomOf="@id/imgSearch"/>-->
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="125dp"
+        android:layout_height="124dp"
         android:background="@drawable/background_wave"
-        app:layout_constraintTop_toBottomOf="@id/llMain"/>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:id="@+id/imgLogo"
@@ -71,7 +71,7 @@
         android:gravity="center"
         android:contentDescription="@null"
         android:src="@drawable/kotlin_hero_logo_white"
-        app:layout_constraintTop_toBottomOf="@id/llMain"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -79,7 +79,7 @@
         android:id="@+id/cardAbout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:layout_marginHorizontal="10dp"
         android:padding="5dp"
         app:cardCornerRadius="5dp"
