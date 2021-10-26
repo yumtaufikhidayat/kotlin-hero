@@ -1,4 +1,4 @@
-package com.taufik.kotlinhero.ui.adapter.learningmaterials
+package com.taufik.kotlinhero.ui.home.kotlinbasic.adapter
 
 import android.content.Intent
 import android.net.Uri
@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.taufik.kotlinhero.databinding.ItemLearningMaterialsBinding
 import com.taufik.kotlinhero.model.learningmaterials.LearningMaterialsItem
 
-class LearningMaterialsAdapter:RecyclerView.Adapter<LearningMaterialsAdapter.MyViewHolder>() {
+class KotlinBasicAdapter:RecyclerView.Adapter<KotlinBasicAdapter.MyViewHolder>() {
 
     private val itemList = ArrayList<LearningMaterialsItem>()
 

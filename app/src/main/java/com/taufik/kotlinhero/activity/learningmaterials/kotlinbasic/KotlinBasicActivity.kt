@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.taufik.kotlinhero.R
-import com.taufik.kotlinhero.ui.adapter.learningmaterials.LearningMaterialsAdapter
+import com.taufik.kotlinhero.ui.home.kotlinbasic.adapter.KotlinBasicAdapter
 import com.taufik.kotlinhero.data.KotlinBasic
 import com.taufik.kotlinhero.databinding.ActivityKotlinBasicBinding
 import com.taufik.kotlinhero.model.learningmaterials.LearningMaterialsItem
@@ -19,7 +19,7 @@ import com.taufik.kotlinhero.model.learningmaterials.LearningMaterialsItem
 class KotlinBasicActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityKotlinBasicBinding
-    private lateinit var learningMaterialsAdapter: LearningMaterialsAdapter
+    private lateinit var kotlinBasicAdapter: KotlinBasicAdapter
     private var kotlinBasicData = ArrayList<LearningMaterialsItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,13 +45,13 @@ class KotlinBasicActivity : AppCompatActivity() {
     private fun setRecyclerViewKotlinBasic() {
 
         kotlinBasicData = KotlinBasic.kotlinDasarData as ArrayList<LearningMaterialsItem>
-        learningMaterialsAdapter = LearningMaterialsAdapter()
+        kotlinBasicAdapter = KotlinBasicAdapter()
 
         binding.apply {
             rvKotlinBasic.layoutManager = LinearLayoutManager(this@KotlinBasicActivity)
             rvKotlinBasic.setHasFixedSize(true)
-            learningMaterialsAdapter.setDataIntroduceKotlin(kotlinBasicData)
-            rvKotlinBasic.adapter = learningMaterialsAdapter
+            kotlinBasicAdapter.setDataIntroduceKotlin(kotlinBasicData)
+            rvKotlinBasic.adapter = kotlinBasicAdapter
         }
     }
 

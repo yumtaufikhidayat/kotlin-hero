@@ -1,4 +1,4 @@
-package com.taufik.kotlinhero.ui.activity
+package com.taufik.kotlinhero.ui
 
 import android.content.Intent
 import android.os.Bundle

@@ -1,17 +1,15 @@
-package com.taufik.kotlinhero.ui.fragment
+package com.taufik.kotlinhero.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import com.taufik.kotlinhero.data.MainData
 import com.taufik.kotlinhero.databinding.FragmentHomeBinding
 import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlinItem
 import com.taufik.kotlinhero.model.category.CategoryItem
-import com.taufik.kotlinhero.ui.adapter.about.AboutKotlinAdapter
-import com.taufik.kotlinhero.ui.adapter.category.CategoryAdapter
+import com.taufik.kotlinhero.ui.about.adapter.AboutKotlinAdapter
 
 class HomeFragment : Fragment() {
 
@@ -49,10 +47,12 @@ class HomeFragment : Fragment() {
         aboutKotlinAdapter = AboutKotlinAdapter()
 
         binding.apply {
-            rvAboutKotlin.layoutManager = GridLayoutManager(requireActivity(), 3)
-            rvAboutKotlin.setHasFixedSize(true)
             aboutKotlinAdapter.setDataAboutKotlin(aboutKotlinItemData)
-            rvAboutKotlin.adapter = aboutKotlinAdapter
+            with(rvAboutKotlin) {
+                layoutManager = GridLayoutManager(requireActivity(), 3)
+                setHasFixedSize(true)
+                adapter = aboutKotlinAdapter
+            }
         }
     }
 
@@ -62,10 +62,12 @@ class HomeFragment : Fragment() {
         categoryAdapter = CategoryAdapter()
 
         binding.apply {
-            rvCategory.layoutManager = GridLayoutManager(requireActivity(), 2)
-            rvCategory.setHasFixedSize(true)
             categoryAdapter.setDataCategoryList(categoryData)
-            rvCategory.adapter = categoryAdapter
+            with(rvCategory) {
+                layoutManager = GridLayoutManager(requireActivity(), 2)
+                setHasFixedSize(true)
+                adapter = categoryAdapter
+            }
         }
     }
 }

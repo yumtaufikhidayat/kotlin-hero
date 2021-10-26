@@ -17,7 +17,13 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/fragment_kotlin_collection.xml" value="0.11546052631578947" />
+        <entry key="app/src/main/res/layout/fragment_kotlin_coroutine.xml" value="0.11546052631578947" />
+        <entry key="app/src/main/res/layout/fragment_kotlin_dasar.xml" value="0.11546052631578947" />
+        <entry key="app/src/main/res/layout/fragment_kotlin_generic.xml" value="0.11546052631578947" />
+        <entry key="app/src/main/res/layout/fragment_kotlin_oop.xml" value="0.11546052631578947" />
+        <entry key="app/src/main/res/layout/fragment_kotlin_unit_testing.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/layout/item_category.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
       </map>

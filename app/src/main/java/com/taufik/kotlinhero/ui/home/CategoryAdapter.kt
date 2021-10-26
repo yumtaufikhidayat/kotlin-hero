@@ -1,4 +1,4 @@
-package com.taufik.kotlinhero.ui.adapter.category
+package com.taufik.kotlinhero.ui.home
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -29,12 +29,12 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryAdapter.MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = ItemCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MyViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: CategoryAdapter.MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val pos = categoryList[position]
         holder.bind(pos)
 

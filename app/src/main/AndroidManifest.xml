@@ -23,10 +23,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.taufik.kotlinhero.ui.activity.MainActivity"
+            android:name="com.taufik.kotlinhero.ui.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.taufik.kotlinhero.ui.activity.SplashscreenActivity"
+            android:name="com.taufik.kotlinhero.ui.SplashscreenActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

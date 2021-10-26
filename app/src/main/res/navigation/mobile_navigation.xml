@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.taufik.kotlinhero.ui.fragment.HomeFragment"
+        android:name="com.taufik.kotlinhero.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/nav_favorite"
-        android:name="com.taufik.kotlinhero.ui.fragment.FavoriteFragment"
+        android:name="com.taufik.kotlinhero.ui.favorite.fragment.FavoriteFragment"
         android:label="fragment_favorite"
         tools:layout="@layout/fragment_favorite" />
     <fragment
         android:id="@+id/nav_about"
-        android:name="com.taufik.kotlinhero.ui.fragment.AboutFragment"
+        android:name="com.taufik.kotlinhero.ui.about.fragment.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
 </navigation>

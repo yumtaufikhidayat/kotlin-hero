@@ -1,4 +1,4 @@
-package com.taufik.kotlinhero.ui.fragment
+package com.taufik.kotlinhero.ui.home.kotlincollection.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
-class AboutFragment : Fragment() {
+class KotlinCollectionFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -18,9 +18,5 @@ class AboutFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
     }
 }
