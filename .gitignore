@@ -21,7 +21,22 @@
 
 # IntelliJ
 .idea
-.gradle
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/compiler.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/caches
+# Android Studio 3 in .gitignore file.
+.idea/caches/build_file_checksums.ser
+.idea/modules.xml
+.idea/dbnavigator.xml
+.idea/navEditor.xml
+.idea/codeStyles/Project.xml
+.idea/shelf/
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
