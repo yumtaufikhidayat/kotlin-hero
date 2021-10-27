@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.taufik.kotlinhero.databinding.FragmentKotlinGenericBinding
 
 class KotlinGenericFragment : Fragment() {
@@ -22,5 +23,16 @@ class KotlinGenericFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        actionToHome()
+    }
+
+    private fun actionToHome() {
+        binding.apply {
+            cardBack.setOnClickListener {
+                val intentAction = KotlinGenericFragmentDirections.actionKotlinGenericFragmentToNavHome()
+                findNavController().navigate(intentAction)
+            }
+        }
     }
 }

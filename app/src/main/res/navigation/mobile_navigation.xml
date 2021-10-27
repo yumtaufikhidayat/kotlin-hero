@@ -95,7 +95,7 @@
         android:label="fragment_kotlin_generic"
         tools:layout="@layout/fragment_kotlin_generic" >
         <action
-            android:id="@+id/action_kotlinGenericFragment_to_nav_home2"
+            android:id="@+id/action_kotlinGenericFragment_to_nav_home"
             app:destination="@id/nav_home"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
@@ -108,7 +108,7 @@
         android:label="fragment_kotlin_collection"
         tools:layout="@layout/fragment_kotlin_collection" >
         <action
-            android:id="@+id/action_kotlinCollectionFragment_to_nav_home2"
+            android:id="@+id/action_kotlinCollectionFragment_to_nav_home"
             app:destination="@id/nav_home"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
@@ -121,7 +121,7 @@
         android:label="fragment_kotlin_coroutine"
         tools:layout="@layout/fragment_kotlin_coroutine" >
         <action
-            android:id="@+id/action_kotlinCoroutineFragment_to_nav_home2"
+            android:id="@+id/action_kotlinCoroutineFragment_to_nav_home"
             app:destination="@id/nav_home"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
@@ -134,7 +134,7 @@
         android:label="fragment_kotlin_unit_testing"
         tools:layout="@layout/fragment_kotlin_unit_testing" >
         <action
-            android:id="@+id/action_kotlinUnitTestingFragment_to_nav_home2"
+            android:id="@+id/action_kotlinUnitTestingFragment_to_nav_home"
             app:destination="@id/nav_home"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
