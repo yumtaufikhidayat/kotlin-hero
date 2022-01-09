@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import com.taufik.kotlinhero.R
 import com.taufik.kotlinhero.databinding.FragmentKotlinOopBinding
 
 class KotlinOOPFragment : Fragment() {
@@ -29,9 +29,11 @@ class KotlinOOPFragment : Fragment() {
 
     private fun actionToHome() {
         binding.apply {
-            cardBack.setOnClickListener {
-                val intentAction = KotlinOOPFragmentDirections.actionKotlinOOPFragmentToNavHome()
-                findNavController().navigate(intentAction)
+            toolbarMain.apply {
+                toolbarTitle.text = getString(R.string.tvKotlinOOP)
+                toolbar.setNavigationOnClickListener {
+                    requireActivity().onBackPressed()
+                }
             }
         }
     }

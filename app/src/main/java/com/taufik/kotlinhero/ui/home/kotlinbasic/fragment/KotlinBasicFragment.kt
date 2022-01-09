@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.taufik.kotlinhero.R
 import com.taufik.kotlinhero.data.KotlinBasic
 import com.taufik.kotlinhero.databinding.FragmentKotlinBasicBinding
 import com.taufik.kotlinhero.model.learningmaterials.LearningMaterialsItem
@@ -38,9 +38,11 @@ class KotlinBasicFragment : Fragment() {
 
     private fun actionToHome() {
         binding.apply {
-            cardBack.setOnClickListener {
-                val intentAction = KotlinBasicFragmentDirections.actionKotlinBasicFragmentToNavHome()
-                findNavController().navigate(intentAction)
+            toolbarMain.apply {
+                toolbarTitle.text = getString(R.string.tvKotlinBasic)
+                toolbar.setNavigationOnClickListener {
+                    requireActivity().onBackPressed()
+                }
             }
         }
     }
