@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         app:itemHorizontalTranslationEnabled="false"
-        app:elevation="0dp"
+        app:elevation="1dp"
         app:labelVisibilityMode="labeled"
         app:itemTextColor="@drawable/bottom_navigation_selector"
         app:itemIconTint="@drawable/bottom_navigation_selector"
