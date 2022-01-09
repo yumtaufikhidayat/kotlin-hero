@@ -27,12 +27,12 @@
     <string name="tvDescription">Deskripsi</string>
 
     <!--Main Menu-->
-    <string name="tvKotlinBasic">Kotlin Dasar</string>
-    <string name="tvKotlinOOP">Kotlin OOP</string>
-    <string name="tvKotlinGeneric">Kotlin Generic</string>
-    <string name="tvKotlinCollection">Kotlin Collection</string>
-    <string name="tvKotlinCoroutine">Kotlin Coroutine</string>
-    <string name="tvKotlinUnitTesting">Kotlin Unit Testing</string>
+    <string name="tvKotlinBasic">Tutorial Kotlin Dasar</string>
+    <string name="tvKotlinOOP">Tutorial Kotlin OOP</string>
+    <string name="tvKotlinGeneric">Tutorial Kotlin Generic</string>
+    <string name="tvKotlinCollection">Tutorial Kotlin Collection</string>
+    <string name="tvKotlinCoroutine">Tutorial Kotlin Coroutine</string>
+    <string name="tvKotlinUnitTesting">Tutorial Kotlin Unit Testing</string>
 
     <!--Bottom Menu-->
     <string name="icHome">Beranda</string>

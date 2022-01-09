@@ -7,12 +7,14 @@
         <entry key="app/src/main/res/drawable/background_white.xml" value="0.1256578947368421" />
         <entry key="app/src/main/res/drawable/bg_splashscreen.xml" value="0.1256578947368421" />
         <entry key="app/src/main/res/drawable/bottom_navigation_selector.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_arrow_back.xml" value="0.1256578947368421" />
         <entry key="app/src/main/res/drawable/ic_arrow_back_ios.xml" value="0.1256578947368421" />
         <entry key="app/src/main/res/drawable/ic_baseline_about.xml" value="0.11527777777777778" />
         <entry key="app/src/main/res/drawable/ic_baseline_favorite.xml" value="0.11527777777777778" />
         <entry key="app/src/main/res/drawable/ic_baseline_home.xml" value="0.1256578947368421" />
         <entry key="app/src/main/res/drawable/ic_favorite.xml" value="0.1244299674267101" />
         <entry key="app/src/main/res/drawable/ic_outline_about.xml" value="0.11527777777777778" />
+        <entry key="app/src/main/res/drawable/ic_outline_arrow_back.xml" value="0.1256578947368421" />
         <entry key="app/src/main/res/drawable/ic_outline_favorite.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_outline_home.xml" value="0.12171052631578948" />
         <entry key="app/src/main/res/drawable/ic_search_purple.xml" value="0.1256578947368421" />
@@ -26,14 +28,15 @@
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.14" />
-        <entry key="app/src/main/res/layout/fragment_kotlin_basic.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_kotlin_basic.xml" value="0.14" />
         <entry key="app/src/main/res/layout/fragment_kotlin_collection.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/layout/fragment_kotlin_coroutine.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/layout/fragment_kotlin_dasar.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/layout/fragment_kotlin_generic.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/layout/fragment_kotlin_oop.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/layout/fragment_kotlin_unit_testing.xml" value="0.11546052631578947" />
-        <entry key="app/src/main/res/layout/item_category.xml" value="0.11546052631578947" />
+        <entry key="app/src/main/res/layout/general_toolbar.xml" value="0.11546052631578947" />
+        <entry key="app/src/main/res/layout/item_category.xml" value="0.15" />
         <entry key="app/src/main/res/layout/item_learning_materials.xml" value="0.21" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
       </map>
