@@ -18,16 +18,6 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
         notifyDataSetChanged()
     }
 
-    inner class MyViewHolder(val binding: ItemCategoryBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(categoryItem: CategoryItem) {
-            binding.apply {
-                imgIcon.setImageResource(categoryItem.categoryIcon)
-                tvCategoryName.text = categoryItem.categoryName
-                tvCategoryNumber.text = categoryItem.categoryNumber
-            }
-        }
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = ItemCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MyViewHolder(view)
@@ -81,4 +71,14 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
     }
 
     override fun getItemCount() : Int = categoryList.size
+
+    inner class MyViewHolder(val binding: ItemCategoryBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(categoryItem: CategoryItem) {
+            binding.apply {
+                imgIcon.setImageResource(categoryItem.categoryIcon)
+                tvCategoryName.text = categoryItem.categoryName
+                tvCategoryNumber.text = categoryItem.categoryNumber
+            }
+        }
+    }
 }
