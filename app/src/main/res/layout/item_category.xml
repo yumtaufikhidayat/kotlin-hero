@@ -10,9 +10,9 @@
     android:clickable="true"
     android:focusable="true"
     android:foreground="?attr/selectableItemBackground"
-    app:cardCornerRadius="5dp"
+    app:cardCornerRadius="6dp"
     app:cardUseCompatPadding="false"
-    app:cardElevation="1dp">
+    app:cardElevation="2dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -40,30 +40,17 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tvCategoryVideoTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/tvTutorial"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/llIconLogo"
-            app:layout_constraintEnd_toEndOf="@+id/llIconLogo"
-            app:layout_constraintTop_toBottomOf="@id/llIconLogo"
-            app:layout_constraintBottom_toTopOf="@+id/tvCategoryName"/>
-
-        <TextView
             android:id="@+id/tvCategoryName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/app_name"
             android:textSize="16sp"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/llIconLogo"
             app:layout_constraintEnd_toEndOf="@+id/llIconLogo"
-            app:layout_constraintTop_toBottomOf="@id/tvCategoryVideoTitle"
+            app:layout_constraintTop_toBottomOf="@id/llIconLogo"
             app:layout_constraintBottom_toTopOf="@+id/tvCategoryNumber"/>
 
         <TextView

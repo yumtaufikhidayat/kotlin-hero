@@ -1,66 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:overScrollMode="never"
     tools:context=".ui.home.HomeFragment">
 
-    <View
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="136dp"
-        android:background="@drawable/background_wave"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            android:background="@drawable/background_wave"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:contentDescription="@null"
-        android:src="@drawable/kotlin_hero_logo_white"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/kotlin_hero_logo_white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardAbout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginHorizontal="10dp"
-        android:padding="5dp"
-        app:cardCornerRadius="5dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@+id/imgLogo">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvAboutKotlin"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAbout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:overScrollMode="never"
+            android:layout_marginTop="28dp"
+            android:layout_marginHorizontal="10dp"
+            android:padding="5dp"
+            app:cardCornerRadius="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/imgLogo">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAboutKotlin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                tools:listitem="@layout/item_about_kotlin"
+                tools:itemCount="1"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:scrollbars="none"
-            tools:listitem="@layout/item_about_kotlin"
-            tools:itemCount="1"/>
+            android:overScrollMode="never"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_category"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            app:layout_constraintTop_toBottomOf="@id/cardAbout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-    </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCategory"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:scrollbars="none"
-        android:overScrollMode="never"
-        tools:itemCount="4"
-        tools:listitem="@layout/item_category"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
-        app:layout_constraintTop_toBottomOf="@id/cardAbout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
