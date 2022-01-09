@@ -15,19 +15,13 @@
         android:theme="@style/Theme.KotlinHero"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".activity.learningmaterials.kotlinbasic.KotlinBasicActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/ActionBarTheme" />
-        <activity
-            android:name=".activity.profile.ProfileActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/ActionBarTheme" />
-        <activity
             android:name="com.taufik.kotlinhero.ui.MainActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:exported="true" />
         <activity
             android:name="com.taufik.kotlinhero.ui.SplashscreenActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
