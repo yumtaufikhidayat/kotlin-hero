@@ -38,6 +38,7 @@
         <entry key="app/src/main/res/layout/general_toolbar.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/layout/item_category.xml" value="0.15" />
         <entry key="app/src/main/res/layout/item_learning_materials.xml" value="0.21" />
+        <entry key="app/src/main/res/layout/toolbar_general.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
       </map>
     </option>
