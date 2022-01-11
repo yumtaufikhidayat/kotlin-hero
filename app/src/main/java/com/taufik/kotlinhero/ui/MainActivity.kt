@@ -1,6 +1,7 @@
 package com.taufik.kotlinhero.ui
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setNavHost()
+        setUpNavigationDestination()
     }
 
     private fun setNavHost() {
@@ -29,6 +31,27 @@ class MainActivity : AppCompatActivity() {
 
         binding.apply {
             navBottom.setupWithNavController(navController)
+        }
+    }
+
+    private fun setUpNavigationDestination() {
+        navController.addOnDestinationChangedListener {_, destination, _ ->
+            when (destination.id) {
+                R.id.kotlinBasicFragment -> hideBottomNavigation()
+                else -> showBottomNavigation()
+            }
+        }
+    }
+
+    private fun showBottomNavigation() {
+        binding.apply {
+            navBottom.visibility = View.VISIBLE
+        }
+    }
+
+    private fun hideBottomNavigation() {
+        binding.apply {
+            navBottom.visibility = View.GONE
         }
     }
 }
