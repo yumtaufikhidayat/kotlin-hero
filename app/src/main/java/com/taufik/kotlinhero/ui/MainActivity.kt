@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.kotlinGenericFragment -> hideBottomNavigation()
                 R.id.kotlinCollectionFragment -> hideBottomNavigation()
                 R.id.kotlinCoroutineFragment -> hideBottomNavigation()
+                R.id.kotlinUnitTestingFragment -> hideBottomNavigation()
                 else -> showBottomNavigation()
             }
         }
