@@ -25,6 +25,7 @@
     <string name="tvAppInfo">Info Aplikasi</string>
     <string name="tvInfo">Info</string>
     <string name="tvDescription">Deskripsi</string>
+    <string name="tvAppVersion">1.0</string>
 
     <!--Main Menu-->
     <string name="tvKotlinBasic">Tutorial Kotlin Dasar</string>
