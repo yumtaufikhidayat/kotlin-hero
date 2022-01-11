@@ -38,7 +38,7 @@ class SplashscreenActivity : AppCompatActivity() {
             try {
                 val pInfo: PackageInfo = packageManager.getPackageInfo(packageName, 0)
                 val appVersion = pInfo.versionName
-                tvAppVersion.text = appVersion
+                tvAppVersion.text = String.format("V%s", appVersion)
             } catch (e: PackageManager.NameNotFoundException) {
                 e.printStackTrace()
             }
