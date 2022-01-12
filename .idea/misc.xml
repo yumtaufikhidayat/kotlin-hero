@@ -35,10 +35,11 @@
         <entry key="app/src/main/res/layout/fragment_kotlin_generic.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/layout/fragment_kotlin_oop.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/layout/fragment_kotlin_unit_testing.xml" value="0.11546052631578947" />
+        <entry key="app/src/main/res/layout/fragment_subject_tutorial.xml" value="0.22" />
         <entry key="app/src/main/res/layout/general_toolbar.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/layout/item_category.xml" value="0.15" />
         <entry key="app/src/main/res/layout/item_learning_materials.xml" value="0.21" />
-        <entry key="app/src/main/res/layout/toolbar_general.xml" value="0.11546052631578947" />
+        <entry key="app/src/main/res/layout/toolbar_general.xml" value="0.18" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
       </map>
     </option>
