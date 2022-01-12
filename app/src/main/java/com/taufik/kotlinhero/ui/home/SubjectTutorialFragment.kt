@@ -11,6 +11,7 @@ class SubjectTutorialFragment : Fragment() {
 
     private lateinit var binding: FragmentSubjectTutorialBinding
     private lateinit var title: String
+    private lateinit var subtitle: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,12 +29,14 @@ class SubjectTutorialFragment : Fragment() {
 
     private fun initBundle() {
         title = arguments?.getString("title").toString()
+        subtitle = arguments?.getString("subtitle").toString()
     }
 
     private fun actionToHome() {
         binding.apply {
             toolbarMain.apply {
                 toolbarTitle.text = title
+                toolbarSubtitle.text = subtitle
                 toolbar.setNavigationOnClickListener {
                     requireActivity().onBackPressed()
                 }

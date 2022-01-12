@@ -2,7 +2,6 @@ package com.taufik.kotlinhero.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.taufik.kotlinhero.R
 import com.taufik.kotlinhero.databinding.ItemCategoryBinding
@@ -15,7 +14,6 @@ class CategoryAdapter(val clickListener: (CategoryItem) -> Unit) : RecyclerView.
     fun setDataCategoryList(category: ArrayList<CategoryItem>) {
         categoryList.clear()
         categoryList.addAll(category)
-        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -37,37 +35,6 @@ class CategoryAdapter(val clickListener: (CategoryItem) -> Unit) : RecyclerView.
 
         holder.itemView.setOnClickListener{
             clickListener(pos)
-//            when (position) {
-//                0 -> {
-//                    val actionToKotlinBasic = Navigation.createNavigateOnClickListener(R.id.action_nav_home_to_kotlinBasicFragment)
-//                    actionToKotlinBasic.onClick(holder.itemView)
-//                }
-//
-//                1 -> {
-//                    val actionToKotlinOOP = Navigation.createNavigateOnClickListener(R.id.action_nav_home_to_kotlinOOPFragment)
-//                    actionToKotlinOOP.onClick(holder.itemView)
-//                }
-//
-//                2 -> {
-//                    val actionToKotlinGeneric = Navigation.createNavigateOnClickListener(R.id.action_nav_home_to_kotlinGenericFragment)
-//                    actionToKotlinGeneric.onClick(holder.itemView)
-//                }
-//
-//                3 -> {
-//                    val actionToKotlinCollection = Navigation.createNavigateOnClickListener(R.id.action_nav_home_to_kotlinCollectionFragment)
-//                    actionToKotlinCollection.onClick(holder.itemView)
-//                }
-//
-//                4 -> {
-//                    val actionToKotlinCoroutine = Navigation.createNavigateOnClickListener(R.id.action_nav_home_to_kotlinCoroutineFragment)
-//                    actionToKotlinCoroutine.onClick(holder.itemView)
-//                }
-//
-//                5 -> {
-//                    val actionToKotlinUnitTesting = Navigation.createNavigateOnClickListener(R.id.action_nav_home_to_kotlinUnitTestingFragment)
-//                    actionToKotlinUnitTesting.onClick(holder.itemView)
-//                }
-//            }
         }
     }
 
