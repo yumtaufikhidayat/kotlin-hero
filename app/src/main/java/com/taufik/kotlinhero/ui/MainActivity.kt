@@ -37,12 +37,7 @@ class MainActivity : AppCompatActivity() {
     private fun setUpNavigationDestination() {
         navController.addOnDestinationChangedListener {_, destination, _ ->
             when (destination.id) {
-                R.id.kotlinBasicFragment -> hideBottomNavigation()
-                R.id.kotlinOOPFragment -> hideBottomNavigation()
-                R.id.kotlinGenericFragment -> hideBottomNavigation()
-                R.id.kotlinCollectionFragment -> hideBottomNavigation()
-                R.id.kotlinCoroutineFragment -> hideBottomNavigation()
-                R.id.kotlinUnitTestingFragment -> hideBottomNavigation()
+                R.id.subjectTutorialFragment -> hideBottomNavigation()
                 else -> showBottomNavigation()
             }
         }

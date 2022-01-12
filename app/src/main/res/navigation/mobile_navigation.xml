@@ -9,50 +9,7 @@
         android:id="@+id/nav_home"
         android:name="com.taufik.kotlinhero.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_nav_home_to_kotlinBasicFragment"
-            app:destination="@id/kotlinBasicFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-        <action
-            android:id="@+id/action_nav_home_to_kotlinOOPFragment"
-            app:destination="@id/kotlinOOPFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-        <action
-            android:id="@+id/action_nav_home_to_kotlinGenericFragment"
-            app:destination="@id/kotlinGenericFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-        <action
-            android:id="@+id/action_nav_home_to_kotlinCollectionFragment"
-            app:destination="@id/kotlinCollectionFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-        <action
-            android:id="@+id/action_nav_home_to_kotlinCoroutineFragment"
-            app:destination="@id/kotlinCoroutineFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-        <action
-            android:id="@+id/action_nav_home_to_kotlinUnitTestingFragment"
-            app:destination="@id/kotlinUnitTestingFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
+        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/nav_favorite"
         android:name="com.taufik.kotlinhero.ui.favorite.fragment.FavoriteFragment"
@@ -67,78 +24,35 @@
         android:id="@+id/kotlinBasicFragment"
         android:name="com.taufik.kotlinhero.ui.home.kotlinbasic.fragment.KotlinBasicFragment"
         android:label="fragment_kotlin_basic"
-        tools:layout="@layout/fragment_kotlin_basic" >
-        <action
-            android:id="@+id/action_kotlinBasicFragment_to_nav_home"
-            app:destination="@id/nav_home"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
+        tools:layout="@layout/fragment_kotlin_basic" />
     <fragment
         android:id="@+id/kotlinOOPFragment"
         android:name="com.taufik.kotlinhero.ui.home.kotlinoop.fragment.KotlinOOPFragment"
         android:label="fragment_kotlin_oop"
-        tools:layout="@layout/fragment_kotlin_oop" >
-        <action
-            android:id="@+id/action_kotlinOOPFragment_to_nav_home"
-            app:destination="@id/nav_home"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
-    <fragment
-        android:id="@+id/kotlinGenericFragment"
-        android:name="com.taufik.kotlinhero.ui.home.kotlingeneric.fragment.KotlinGenericFragment"
-        android:label="fragment_kotlin_generic"
-        tools:layout="@layout/fragment_kotlin_generic" >
-        <action
-            android:id="@+id/action_kotlinGenericFragment_to_nav_home"
-            app:destination="@id/nav_home"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
+        tools:layout="@layout/fragment_kotlin_oop" />
     <fragment
         android:id="@+id/kotlinCollectionFragment"
         android:name="com.taufik.kotlinhero.ui.home.kotlincollection.fragment.KotlinCollectionFragment"
         android:label="fragment_kotlin_collection"
-        tools:layout="@layout/fragment_kotlin_collection" >
-        <action
-            android:id="@+id/action_kotlinCollectionFragment_to_nav_home"
-            app:destination="@id/nav_home"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
+        tools:layout="@layout/fragment_kotlin_collection" />
     <fragment
         android:id="@+id/kotlinCoroutineFragment"
         android:name="com.taufik.kotlinhero.ui.home.kotlincoroutine.fragment.KotlinCoroutineFragment"
         android:label="fragment_kotlin_coroutine"
-        tools:layout="@layout/fragment_kotlin_coroutine" >
-        <action
-            android:id="@+id/action_kotlinCoroutineFragment_to_nav_home"
-            app:destination="@id/nav_home"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
+        tools:layout="@layout/fragment_kotlin_coroutine" />
     <fragment
         android:id="@+id/kotlinUnitTestingFragment"
         android:name="com.taufik.kotlinhero.ui.home.kotlinunittesting.fragment.KotlinUnitTestingFragment"
         android:label="fragment_kotlin_unit_testing"
-        tools:layout="@layout/fragment_kotlin_unit_testing" >
-        <action
-            android:id="@+id/action_kotlinUnitTestingFragment_to_nav_home"
-            app:destination="@id/nav_home"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_left" />
-    </fragment>
+        tools:layout="@layout/fragment_kotlin_unit_testing" />
+    <fragment
+        android:id="@+id/subjectTutorialFragment"
+        android:name="com.taufik.kotlinhero.ui.home.SubjectTutorialFragment"
+        android:label="fragment_subject_tutorial"
+        tools:layout="@layout/fragment_subject_tutorial" />
+    <fragment
+        android:id="@+id/kotlinGenericFragment"
+        android:name="com.taufik.kotlinhero.ui.home.kotlingeneric.fragment.KotlinGenericFragment"
+        android:label="fragment_kotlin_generic"
+        tools:layout="@layout/fragment_kotlin_generic" />
 </navigation>

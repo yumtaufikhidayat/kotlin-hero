@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.taufik.kotlinhero.R
 import com.taufik.kotlinhero.data.KotlinBasic
 import com.taufik.kotlinhero.databinding.FragmentKotlinBasicBinding
 import com.taufik.kotlinhero.model.learningmaterials.LearningMaterialsItem
@@ -17,6 +16,7 @@ class KotlinBasicFragment : Fragment() {
 
     private lateinit var binding: FragmentKotlinBasicBinding
     private lateinit var kotlinBasicAdapter: KotlinBasicAdapter
+    private lateinit var title: String
     private var kotlinBasicData = ArrayList<LearningMaterialsItem>()
 
     override fun onCreateView(
@@ -31,15 +31,19 @@ class KotlinBasicFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initBundle()
         actionToHome()
-
         setRecyclerViewKotlinBasic()
+    }
+
+    private fun initBundle() {
+        title = arguments?.getString("title").toString()
     }
 
     private fun actionToHome() {
         binding.apply {
             toolbarMain.apply {
-                toolbarTitle.text = getString(R.string.tvKotlinBasic)
+                toolbarTitle.text = title
                 toolbar.setNavigationOnClickListener {
                     requireActivity().onBackPressed()
                 }

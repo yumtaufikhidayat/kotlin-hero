@@ -4,8 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.taufik.kotlinhero.R
 import com.taufik.kotlinhero.data.MainData
 import com.taufik.kotlinhero.databinding.FragmentHomeBinding
 import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlinItem
@@ -60,7 +63,13 @@ class HomeFragment : Fragment() {
     private fun setRecyclerViewCategory() {
 
         categoryData = MainData.categoryTutorialData as ArrayList<CategoryItem>
-        categoryAdapter = CategoryAdapter()
+        categoryAdapter = CategoryAdapter { categoryItem ->
+            val bundle = bundleOf(
+                "title" to categoryItem.categoryName
+            )
+
+            findNavController().navigate(R.id.subjectTutorialFragment, bundle)
+        }
 
         binding.apply {
             categoryAdapter.setDataCategoryList(categoryData)

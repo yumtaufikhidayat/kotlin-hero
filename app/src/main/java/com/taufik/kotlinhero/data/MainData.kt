@@ -18,12 +18,12 @@ class MainData {
         // Main Category
         val categoryTutorialData: List<CategoryItem>
             get() = mutableListOf(
-                CategoryItem(R.drawable.kotlin_logos,"Tutorial\nKotlin Dasar", "42 Materi"),
-                CategoryItem(R.drawable.kotlin_logos,"Tutorial\nKotlin OOP", "51 Materi"),
-                CategoryItem(R.drawable.kotlin_logos,"Tutorial\nKotlin Generic", "16 Materi"),
-                CategoryItem(R.drawable.kotlin_logos,"Tutorial\nKotlin Collection", "42 Materi"),
-                CategoryItem(R.drawable.kotlin_logos,"Tutorial\nKotlin Coroutine", "1 Materi"),
-                CategoryItem(R.drawable.kotlin_logos,"Tutorial\nKotlin Unit Testing", "25 Materi")
+                CategoryItem(R.drawable.kotlin_logos,"Tutorial Kotlin Dasar", "42 Materi"),
+                CategoryItem(R.drawable.kotlin_logos,"Tutorial Kotlin OOP", "51 Materi"),
+                CategoryItem(R.drawable.kotlin_logos,"Tutorial Kotlin Generic", "16 Materi"),
+                CategoryItem(R.drawable.kotlin_logos,"Tutorial Kotlin Collection", "42 Materi"),
+                CategoryItem(R.drawable.kotlin_logos,"Tutorial Kotlin Coroutine", "1 Materi"),
+                CategoryItem(R.drawable.kotlin_logos,"Tutorial Kotlin Unit Testing", "25 Materi")
             )
     }
 }
