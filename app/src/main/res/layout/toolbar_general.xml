@@ -23,7 +23,7 @@
             android:id="@+id/toolbarTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/tvKotlinBasic"
+            tools:text="@string/tvTitle"
             android:layout_gravity="center"
             android:textColor="@color/white"
             android:textStyle="bold"

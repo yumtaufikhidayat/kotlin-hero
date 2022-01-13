@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.taufik.kotlinhero.R
 import com.taufik.kotlinhero.databinding.FragmentKotlinCoroutineBinding
 
 class KotlinCoroutineFragment : Fragment() {
@@ -30,7 +29,6 @@ class KotlinCoroutineFragment : Fragment() {
     private fun actionToHome() {
         binding.apply {
             toolbarMain.apply {
-                toolbarTitle.text = getString(R.string.tvKotlinCoroutine)
                 toolbar.setNavigationOnClickListener {
                     requireActivity().onBackPressed()
                 }
