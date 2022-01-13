@@ -1,10 +1,6 @@
 <resources>
     <string name="app_name">Kotlin Hero</string>
     <string name="tvOne">1.</string>
-    <string name="tvLipsum">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua.
-    </string>
     <string name="tvSearch">Cari…</string>
     <string name="tvSearchVideo">Cari video tutorial…</string>
     <string name="tvIntroduceKotlin">Tentang Kotlin</string>
@@ -26,20 +22,13 @@
     <string name="tvInfo">Info</string>
     <string name="tvDescription">Deskripsi</string>
     <string name="tvAppVersion">1.0</string>
-
-    <!--Main Menu-->
-    <string name="tvKotlinBasic">Tutorial Kotlin Dasar</string>
-    <string name="tvKotlinOOP">Tutorial Kotlin OOP</string>
-    <string name="tvKotlinGeneric">Tutorial Kotlin Generic</string>
-    <string name="tvKotlinCollection">Tutorial Kotlin Collection</string>
-    <string name="tvKotlinCoroutine">Tutorial Kotlin Coroutine</string>
-    <string name="tvKotlinUnitTesting">Tutorial Kotlin Unit Testing</string>
+    <string name="tvSubtitle">2 Materi</string>
+    <string name="tvAskToLearnToday">Mau belajar apa hari ini?</string>
+    <string name="tvTitle">Tutorial Kotlin Dasar</string>
 
     <!--Bottom Menu-->
     <string name="icHome">Beranda</string>
     <string name="icFavorite">Favorit</string>
     <string name="icAbout">Tentang</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -13,18 +13,9 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="454" />
-                            <option name="y" value="1436" />
+                            <option name="x" value="675" />
+                            <option name="y" value="12" />
                           </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_kotlinBasicFragment_to_nav_home2">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -34,18 +25,9 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="454" />
-                            <option name="y" value="724" />
+                            <option name="x" value="233" />
+                            <option name="y" value="368" />
                           </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_kotlinCollectionFragment_to_nav_home2">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -59,15 +41,6 @@
                             <option name="y" value="368" />
                           </Point>
                         </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_kotlinCoroutineFragment_to_nav_home2">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
-                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -76,18 +49,9 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="896" />
-                            <option name="y" value="692" />
+                            <option name="x" value="233" />
+                            <option name="y" value="724" />
                           </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_kotlinGenericFragment_to_nav_home2">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -97,18 +61,9 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="454" />
-                            <option name="y" value="1080" />
+                            <option name="x" value="12" />
+                            <option name="y" value="368" />
                           </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_kotlinOOPFragment_to_nav_home2">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -118,18 +73,9 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="454" />
-                            <option name="y" value="12" />
+                            <option name="x" value="675" />
+                            <option name="y" value="368" />
                           </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_kotlinUnitTestingFragment_to_nav_home2">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -139,7 +85,7 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="233" />
+                            <option name="x" value="454" />
                             <option name="y" value="12" />
                           </Point>
                         </option>
@@ -151,7 +97,7 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
+                            <option name="x" value="233" />
                             <option name="y" value="12" />
                           </Point>
                         </option>
@@ -163,43 +109,21 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="675" />
-                            <option name="y" value="692" />
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_nav_home_to_kotlinBasicFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_nav_home_to_kotlinCollectionFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_nav_home_to_kotlinCoroutineFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_nav_home_to_kotlinGenericFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_nav_home_to_kotlinOOPFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_nav_home_to_kotlinUnitTestingFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="subjectTutorialFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="724" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

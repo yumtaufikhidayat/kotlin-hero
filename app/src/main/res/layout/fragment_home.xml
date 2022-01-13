@@ -12,9 +12,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <View
+            android:id="@+id/viewBackground"
             android:layout_width="match_parent"
-            android:layout_height="136dp"
+            android:layout_height="190dp"
             android:background="@drawable/background_wave"
             app:layout_constraintTop_toTopOf="parent"/>
 
@@ -22,11 +24,11 @@
             android:id="@+id/imgLogo"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:layout_marginTop="20dp"
             android:gravity="center"
             android:contentDescription="@null"
             android:src="@drawable/kotlin_hero_logo_white"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/viewBackground"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -52,21 +54,32 @@
 
         </androidx.cardview.widget.CardView>
 
+        <TextView
+            android:id="@+id/tvAskToLearnToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="@string/tvAskToLearnToday"
+            app:layout_constraintTop_toBottomOf="@id/cardAbout"
+            app:layout_constraintStart_toStartOf="@id/cardAbout"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:scrollbars="none"
             android:overScrollMode="never"
             tools:itemCount="4"
             tools:listitem="@layout/item_category"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="2"
-            app:layout_constraintTop_toBottomOf="@id/cardAbout"
+            app:layout_constraintTop_toBottomOf="@id/tvAskToLearnToday"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintStart_toStartOf="@id/cardAbout"
+            app:layout_constraintEnd_toEndOf="@id/cardAbout"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

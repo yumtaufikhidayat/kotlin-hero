@@ -65,7 +65,8 @@ class HomeFragment : Fragment() {
         categoryData = MainData.categoryTutorialData as ArrayList<CategoryItem>
         categoryAdapter = CategoryAdapter { categoryItem ->
             val bundle = bundleOf(
-                "title" to categoryItem.categoryName
+                "title" to categoryItem.categoryName,
+                "subtitle" to categoryItem.categoryNumber
             )
 
             findNavController().navigate(R.id.subjectTutorialFragment, bundle)
