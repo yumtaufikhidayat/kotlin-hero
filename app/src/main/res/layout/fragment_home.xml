@@ -70,6 +70,7 @@
             android:id="@+id/rvCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
             android:scrollbars="none"
             android:overScrollMode="never"
             tools:itemCount="4"
