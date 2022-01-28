@@ -39,9 +39,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun setRecyclerViewLayout() {
-
         setRecyclerViewAboutKotlin()
-
         setRecyclerViewCategory()
     }
 
