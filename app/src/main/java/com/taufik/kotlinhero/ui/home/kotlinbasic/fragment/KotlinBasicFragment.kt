@@ -10,7 +10,6 @@ import com.taufik.kotlinhero.data.KotlinBasic
 import com.taufik.kotlinhero.databinding.FragmentKotlinBasicBinding
 import com.taufik.kotlinhero.model.learningmaterials.LearningMaterialsItem
 import com.taufik.kotlinhero.ui.home.kotlinbasic.adapter.KotlinBasicAdapter
-import java.util.*
 
 class KotlinBasicFragment : Fragment() {
 

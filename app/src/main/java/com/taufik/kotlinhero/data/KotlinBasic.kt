@@ -1,7 +1,7 @@
 package com.taufik.kotlinhero.data
 
-import com.taufik.kotlinhero.utils.KotlinBasicHelper
 import com.taufik.kotlinhero.model.learningmaterials.LearningMaterialsItem
+import com.taufik.kotlinhero.utils.KotlinBasicHelper
 
 class KotlinBasic {
     companion object{
