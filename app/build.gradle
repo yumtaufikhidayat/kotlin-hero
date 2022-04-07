@@ -7,13 +7,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 32
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.taufik.kotlinhero"
         minSdkVersion 23
-        targetSdkVersion 31
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
 
@@ -41,7 +41,7 @@ android {
 dependencies {
 
     // Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.30"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.10"
     implementation 'androidx.core:core-ktx:1.7.0'
 
     // UI
@@ -77,7 +77,7 @@ dependencies {
     implementation "com.pierfrancescosoffritti.androidyoutubeplayer:core:$androidYoutubePlayerVersion"
 
     // Room DB
-    def room_version = '2.4.1'
+    def room_version = '2.4.2'
     implementation "androidx.room:room-runtime:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
     testImplementation "androidx.room:room-testing:$room_version"
