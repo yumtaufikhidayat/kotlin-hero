@@ -58,25 +58,35 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun setRecyclerViewCategory() {
+    private fun setRecyclerViewCategory() = with(binding) {
 
         categoryData = MainData.categoryTutorialData as ArrayList<CategoryItem>
-        categoryAdapter = CategoryAdapter { categoryItem ->
+        categoryAdapter = CategoryAdapter { categoryItem, position ->
             val bundle = bundleOf(
-                "title" to categoryItem.categoryName,
-                "subtitle" to categoryItem.categoryNumber
+                EXTRA_TITLE to categoryItem.categoryName,
+                EXTRA_SUBTITLE to categoryItem.categoryNumber
             )
 
-            findNavController().navigate(R.id.subjectTutorialFragment, bundle)
-        }
-
-        binding.apply {
-            categoryAdapter.setDataCategoryList(categoryData)
-            with(rvCategory) {
-                layoutManager = GridLayoutManager(requireActivity(), 2)
-                setHasFixedSize(true)
-                adapter = categoryAdapter
+            when (position) {
+                0 -> findNavController().navigate(R.id.kotlinBasicFragment, bundle)
+                1 -> findNavController().navigate(R.id.kotlinOOPFragment, bundle)
+                2 -> findNavController().navigate(R.id.kotlinGenericFragment, bundle)
+                3 -> findNavController().navigate(R.id.kotlinCollectionFragment, bundle)
+                4 -> findNavController().navigate(R.id.kotlinCoroutineFragment, bundle)
+                5 -> findNavController().navigate(R.id.kotlinUnitTestingFragment, bundle)
             }
         }
+
+        categoryAdapter.setDataCategoryList(categoryData)
+        with(rvCategory) {
+            layoutManager = GridLayoutManager(requireActivity(), 2)
+            setHasFixedSize(true)
+            adapter = categoryAdapter
+        }
+    }
+
+    companion object {
+        const val EXTRA_TITLE = "com.taufik.kotlinhero.ui.home.EXTRA_TITLE"
+        const val EXTRA_SUBTITLE = "com.taufik.kotlinhero.ui.home.EXTRA_SUBTITLE"
     }
 }
