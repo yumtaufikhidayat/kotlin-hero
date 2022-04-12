@@ -7,7 +7,9 @@ import com.taufik.kotlinhero.R
 import com.taufik.kotlinhero.databinding.ItemCategoryBinding
 import com.taufik.kotlinhero.model.category.CategoryItem
 
-class CategoryAdapter(val clickListener: (CategoryItem) -> Unit) : RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
+class CategoryAdapter(
+    val clickListener: (CategoryItem, Int) -> Unit
+) : RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
 
     private val categoryList = ArrayList<CategoryItem>()
 
@@ -33,20 +35,19 @@ class CategoryAdapter(val clickListener: (CategoryItem) -> Unit) : RecyclerView.
             )
         }
 
-        holder.itemView.setOnClickListener{
-            clickListener(pos)
+        holder.itemView.setOnClickListener {
+            clickListener(pos, position)
         }
     }
 
     override fun getItemCount() : Int = categoryList.size
 
-    inner class MyViewHolder(val binding: ItemCategoryBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(categoryItem: CategoryItem) {
-            binding.apply {
-                imgIcon.setImageResource(categoryItem.categoryIcon)
-                tvCategoryName.text = categoryItem.categoryName
-                tvCategoryNumber.text = categoryItem.categoryNumber
-            }
+    inner class MyViewHolder(val binding: ItemCategoryBinding)
+        : RecyclerView.ViewHolder(binding.root) {
+        fun bind(categoryItem: CategoryItem) = with(binding) {
+            imgIcon.setImageResource(categoryItem.categoryIcon)
+            tvCategoryName.text = categoryItem.categoryName
+            tvCategoryNumber.text = categoryItem.categoryNumber
         }
     }
 }
