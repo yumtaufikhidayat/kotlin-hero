@@ -13,6 +13,7 @@ class SplashscreenActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashscreenBinding
     private lateinit var handler: Handler
+    private val delayInMillis = 1000L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +31,7 @@ class SplashscreenActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }, 1000)
+        }, delayInMillis)
     }
 
     private fun setAppVersion() {
