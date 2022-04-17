@@ -17,7 +17,8 @@ import com.taufik.kotlinhero.ui.about.adapter.AboutKotlinAdapter
 
 class HomeFragment : Fragment() {
 
-    private lateinit var binding: FragmentHomeBinding
+    private var _binding : FragmentHomeBinding? = null
+    private val binding get() = _binding!!
     private lateinit var aboutKotlinAdapter: AboutKotlinAdapter
     private lateinit var categoryAdapter: CategoryAdapter
     private var aboutKotlinItemData = ArrayList<AboutKotlinItem>()
@@ -28,7 +29,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -83,6 +84,11 @@ class HomeFragment : Fragment() {
             setHasFixedSize(true)
             adapter = categoryAdapter
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {

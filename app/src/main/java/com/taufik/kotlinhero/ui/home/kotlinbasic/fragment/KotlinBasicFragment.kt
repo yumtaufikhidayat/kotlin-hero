@@ -15,7 +15,8 @@ import com.taufik.kotlinhero.ui.home.kotlinbasic.adapter.KotlinBasicAdapter
 
 class KotlinBasicFragment : Fragment() {
 
-    private lateinit var binding: FragmentKotlinBasicBinding
+    private var _binding: FragmentKotlinBasicBinding? =null
+    private val binding get() = _binding!!
     private lateinit var kotlinBasicAdapter: KotlinBasicAdapter
     private lateinit var title: String
     private lateinit var subTitle: String
@@ -26,7 +27,7 @@ class KotlinBasicFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentKotlinBasicBinding.inflate(inflater, container, false)
+        _binding = FragmentKotlinBasicBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -68,5 +69,10 @@ class KotlinBasicFragment : Fragment() {
                 adapter = kotlinBasicAdapter
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

@@ -10,7 +10,8 @@ import com.taufik.kotlinhero.ui.home.HomeFragment
 
 class KotlinOOPFragment : Fragment() {
 
-    private lateinit var binding: FragmentKotlinOopBinding
+    private var _binding: FragmentKotlinOopBinding? = null
+    private val binding get() = _binding!!
     private lateinit var title: String
     private lateinit var subTitle: String
 
@@ -19,7 +20,7 @@ class KotlinOOPFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentKotlinOopBinding.inflate(inflater, container, false)
+        _binding = FragmentKotlinOopBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -47,5 +48,10 @@ class KotlinOOPFragment : Fragment() {
                 }
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

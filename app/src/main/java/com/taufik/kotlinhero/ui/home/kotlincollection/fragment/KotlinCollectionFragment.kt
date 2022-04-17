@@ -10,7 +10,8 @@ import com.taufik.kotlinhero.ui.home.HomeFragment
 
 class KotlinCollectionFragment : Fragment() {
 
-    private lateinit var binding: FragmentKotlinCollectionBinding
+    private var _binding: FragmentKotlinCollectionBinding? = null
+    private val binding get() = _binding!!
     private lateinit var title: String
     private lateinit var subTitle: String
 
@@ -19,7 +20,7 @@ class KotlinCollectionFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentKotlinCollectionBinding.inflate(inflater, container, false)
+        _binding = FragmentKotlinCollectionBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -47,5 +48,10 @@ class KotlinCollectionFragment : Fragment() {
                 }
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
