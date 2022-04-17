@@ -1,4 +1,4 @@
-package com.taufik.kotlinhero.ui.about.adapter
+package com.taufik.kotlinhero.ui.reference.adapter
 
 import android.content.Intent
 import android.net.Uri
@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.taufik.kotlinhero.databinding.ItemAboutKotlinBinding
 import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlinItem
 
-class AboutKotlinAdapter : RecyclerView.Adapter<AboutKotlinAdapter.MyViewHolder>() {
+class ReferenceKotlinAdapter : RecyclerView.Adapter<ReferenceKotlinAdapter.MyViewHolder>() {
 
     private val aboutKotlinList = ArrayList<AboutKotlinItem>()
 

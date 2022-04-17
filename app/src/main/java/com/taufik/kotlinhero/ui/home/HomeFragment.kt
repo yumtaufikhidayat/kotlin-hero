@@ -13,13 +13,13 @@ import com.taufik.kotlinhero.data.MainData
 import com.taufik.kotlinhero.databinding.FragmentHomeBinding
 import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlinItem
 import com.taufik.kotlinhero.model.category.CategoryItem
-import com.taufik.kotlinhero.ui.about.adapter.AboutKotlinAdapter
+import com.taufik.kotlinhero.ui.reference.adapter.ReferenceKotlinAdapter
 
 class HomeFragment : Fragment() {
 
     private var _binding : FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    private lateinit var aboutKotlinAdapter: AboutKotlinAdapter
+    private lateinit var referenceKotlinAdapter: ReferenceKotlinAdapter
     private lateinit var categoryAdapter: CategoryAdapter
     private var aboutKotlinItemData = ArrayList<AboutKotlinItem>()
     private var categoryData = ArrayList<CategoryItem>()
@@ -47,14 +47,14 @@ class HomeFragment : Fragment() {
     private fun setRecyclerViewAboutKotlin() {
 
         aboutKotlinItemData = MainData.aboutKotlinData as ArrayList<AboutKotlinItem>
-        aboutKotlinAdapter = AboutKotlinAdapter()
+        referenceKotlinAdapter = ReferenceKotlinAdapter()
 
         binding.apply {
-            aboutKotlinAdapter.setDataAboutKotlin(aboutKotlinItemData)
+            referenceKotlinAdapter.setDataAboutKotlin(aboutKotlinItemData)
             with(rvAboutKotlin) {
                 layoutManager = GridLayoutManager(requireActivity(), 3)
                 setHasFixedSize(true)
-                adapter = aboutKotlinAdapter
+                adapter = referenceKotlinAdapter
             }
         }
     }
