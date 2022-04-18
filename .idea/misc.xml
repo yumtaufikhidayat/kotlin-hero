@@ -17,8 +17,12 @@
         <entry key="app/src/main/res/drawable/ic_favorite.xml" value="0.1244299674267101" />
         <entry key="app/src/main/res/drawable/ic_outline_about.xml" value="0.11527777777777778" />
         <entry key="app/src/main/res/drawable/ic_outline_arrow_back.xml" value="0.1256578947368421" />
+        <entry key="app/src/main/res/drawable/ic_outline_bug.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_outline_email.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_outline_favorite.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_outline_home.xml" value="0.12171052631578948" />
+        <entry key="app/src/main/res/drawable/ic_outline_rate.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_outline_vector.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_search_purple.xml" value="0.1256578947368421" />
         <entry key="app/src/main/res/drawable/nav_about_selector.xml" value="0.11527777777777778" />
         <entry key="app/src/main/res/drawable/nav_favorite_selector.xml" value="0.11527777777777778" />
@@ -27,7 +31,7 @@
         <entry key="app/src/main/res/layout/activity_kotlin_basic.xml" value="0.11180555555555556" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splashscreen.xml" value="0.11546052631578947" />
-        <entry key="app/src/main/res/layout/fragment_about.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_about.xml" value="0.11433224755700326" />
         <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/layout/fragment_kotlin_basic.xml" value="0.14" />
@@ -39,9 +43,13 @@
         <entry key="app/src/main/res/layout/fragment_kotlin_unit_testing.xml" value="0.11546052631578947" />
         <entry key="app/src/main/res/layout/fragment_subject_tutorial.xml" value="0.22" />
         <entry key="app/src/main/res/layout/general_toolbar.xml" value="0.11546052631578947" />
+        <entry key="app/src/main/res/layout/item_about.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_about_child.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_about_parent.xml" value="0.21" />
         <entry key="app/src/main/res/layout/item_category.xml" value="0.15" />
         <entry key="app/src/main/res/layout/item_learning_materials.xml" value="0.1" />
         <entry key="app/src/main/res/layout/toolbar_general.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/toolbar_main.xml" value="0.2" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
       </map>
     </option>

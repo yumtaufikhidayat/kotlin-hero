@@ -308,7 +308,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialicons/chrome_reader_mode/baseline_chrome_reader_mode_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialiconsoutlined/update/outline_update_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -319,7 +319,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="3700b3" />
-                            <entry key="outputName" value="ic_docs" />
+                            <entry key="outputName" value="ic_update" />
                           </map>
                         </option>
                       </PersistentState>
