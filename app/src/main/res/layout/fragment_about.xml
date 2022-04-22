@@ -12,15 +12,14 @@
         layout="@layout/toolbar_about"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvAboutParentCategory"
+        android:id="@+id/rvAbout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:clipToPadding="false"
+        android:layout_marginTop="8dp"
         android:scrollbars="none"
         android:overScrollMode="never"
-        tools:listitem="@layout/item_about_parent"
-        tools:itemCount="2"
-        app:layout_constraintTop_toBottomOf="@id/toolbarAbout"
+        tools:listitem="@layout/item_about"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarAbout"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

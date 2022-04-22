@@ -1,6 +1,5 @@
 package com.taufik.kotlinhero.data
 
-import com.taufik.kotlinhero.BuildConfig
 import com.taufik.kotlinhero.R
 import com.taufik.kotlinhero.data.source.local.About
 import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlinItem
@@ -26,9 +25,8 @@ object MainData {
             CategoryItem(R.drawable.kotlin_logos,"Tutorial Kotlin Unit Testing", "25 Materi")
         )
 
-    val aboutCategory: List<Any>
-        get() = mutableListOf(
-            "Author",
+    fun generateAboutAuthorData(): List<About> {
+        return mutableListOf(
             About(
                 R.drawable.ic_outline_profile,
                 "Let's greet",
@@ -47,23 +45,11 @@ object MainData {
                 "yumtaufikhidayat@gmail.com"
             ),
 
-            "Application",
-            About(
-                R.drawable.ic_update,
-                "Version",
-                BuildConfig.VERSION_NAME
-            ),
-
-            About(
-                R.drawable.ic_outline_rate,
-                "Rate this app",
-                "Like this app? Rate 5 stars"
-            ),
-
             About(
                 R.drawable.ic_outline_bug,
                 "Report an issue",
                 "Found an issue? Report in here"
             )
         )
+    }
 }

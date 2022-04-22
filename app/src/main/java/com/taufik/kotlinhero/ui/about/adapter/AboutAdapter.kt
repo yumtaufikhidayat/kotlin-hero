@@ -4,67 +4,42 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.taufik.kotlinhero.data.source.local.About
-import com.taufik.kotlinhero.databinding.ItemAboutChildBinding
-import com.taufik.kotlinhero.databinding.ItemAboutParentBinding
-import java.lang.IllegalArgumentException
+import com.taufik.kotlinhero.databinding.ItemAboutBinding
 
 class AboutAdapter(
-    private val data: List<Any>
-) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    val clickListener: (Int) -> Unit
+) : RecyclerView.Adapter<AboutAdapter.AboutViewHolder>() {
+
+    private val data = ArrayList<About>()
+
+    fun setAboutAuthorData(about: List<About>) {
+        data.clear()
+        data.addAll(about)
+    }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): RecyclerView.ViewHolder {
-        return when (viewType) {
-            PARENT_CATEGORY -> AboutParentAdapter(
-                ItemAboutParentBinding.inflate(
-                    LayoutInflater.from(
-                        parent.context
-                    ), parent, false
-                )
-            )
-
-            CHILD_CATEGORY -> AboutChildAdapter(
-                ItemAboutChildBinding.inflate(
-                    LayoutInflater.from(
-                        parent.context
-                    ), parent, false
-                )
-            )
-
-            else -> throw IllegalArgumentException("Undefined view type")
-        }
+    ): AboutAdapter.AboutViewHolder {
+        val inflater = ItemAboutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return AboutViewHolder(inflater)
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when (holder.itemViewType) {
-            PARENT_CATEGORY -> {
-                val parentAdapter = holder as AboutParentAdapter
-                parentAdapter.onBind(data[position] as String)
-            }
-
-            CHILD_CATEGORY -> {
-                val childAdapter = holder as AboutChildAdapter
-                childAdapter.onBind(data[position] as About)
-            }
-
-            else -> throw IllegalArgumentException("Undefined view type")
-        }
+    override fun onBindViewHolder(holder: AboutAdapter.AboutViewHolder, position: Int) {
+        holder.onBind(data[position], position)
     }
 
     override fun getItemCount(): Int = data.size
 
-    override fun getItemViewType(position: Int): Int {
-        return when (data[position]) {
-            is String -> PARENT_CATEGORY
-            is About -> CHILD_CATEGORY
-            else -> throw IllegalArgumentException("Undefined view type")
+    inner class AboutViewHolder(private val binding: ItemAboutBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun onBind(about: About, position: Int) = with(binding) {
+            imgAbout.setImageResource(about.icon)
+            tvAboutTitle.text = about.title
+            tvAboutDesc.text = about.desc
+            cardAbout.setOnClickListener {
+                clickListener(position)
+            }
         }
-    }
-
-    companion object {
-        private const val PARENT_CATEGORY = 0
-        private const val CHILD_CATEGORY = 1
     }
 }
