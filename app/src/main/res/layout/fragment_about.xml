@@ -9,13 +9,12 @@
 
     <include
         android:id="@+id/toolbarAbout"
-        layout="@layout/toolbar_about"/>
+        layout="@layout/toolbar_general_center"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvAbout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         android:scrollbars="none"
         android:overScrollMode="never"
         tools:listitem="@layout/item_about"
