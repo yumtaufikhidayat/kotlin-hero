@@ -36,7 +36,7 @@ object MainData {
             About(
                 R.drawable.github,
                 "Fork on Github",
-                "Fork this app on Github"
+                "Fork this project on Github"
             ),
 
             About(
