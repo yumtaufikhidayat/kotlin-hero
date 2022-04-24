@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.taufik.kotlinhero.R
 import com.taufik.kotlinhero.databinding.FragmentAboutBinding
 import com.taufik.kotlinhero.ui.about.adapter.AboutAdapter
 import com.taufik.kotlinhero.ui.about.viewmodel.AboutViewModel
@@ -47,6 +48,7 @@ class AboutFragment : Fragment() {
 
     private fun setAboutAuthorData() {
         binding.apply {
+            toolbarAbout.toolbarTitle.text = getString(R.string.icAbout)
             aboutAdapter = AboutAdapter { position ->
                 when (position) {
                     0 -> {
