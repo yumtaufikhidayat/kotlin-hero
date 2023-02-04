@@ -13,3 +13,4 @@ This app is built with these technologies:
 - LiveData
 - Retrofit
 - View Binding
+- Navigation Components
