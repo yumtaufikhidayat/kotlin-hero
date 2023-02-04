@@ -60,7 +60,7 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
 
     // Libs
-    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+//    implementation files('libs/YouTubeAndroidPlayerApi.jar')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     // View Model
