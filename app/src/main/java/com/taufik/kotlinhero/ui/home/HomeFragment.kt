@@ -19,8 +19,8 @@ class HomeFragment : Fragment() {
 
     private var _binding : FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    private lateinit var referenceKotlinAdapter: ReferenceKotlinAdapter
-    private lateinit var categoryAdapter: CategoryAdapter
+    private val referenceKotlinAdapter by lazy { ReferenceKotlinAdapter() }
+    private var categoryAdapter: CategoryAdapter? = null
     private var aboutKotlinItemData = ArrayList<AboutKotlinItem>()
     private var categoryData = ArrayList<CategoryItem>()
 
@@ -47,7 +47,6 @@ class HomeFragment : Fragment() {
     private fun setRecyclerViewAboutKotlin() {
 
         aboutKotlinItemData = MainData.aboutKotlinData as ArrayList<AboutKotlinItem>
-        referenceKotlinAdapter = ReferenceKotlinAdapter()
 
         binding.apply {
             referenceKotlinAdapter.setDataAboutKotlin(aboutKotlinItemData)
@@ -78,7 +77,7 @@ class HomeFragment : Fragment() {
             }
         }
 
-        categoryAdapter.setDataCategoryList(categoryData)
+        categoryAdapter?.setDataCategoryList(categoryData)
         with(rvCategory) {
             layoutManager = GridLayoutManager(requireActivity(), 2)
             setHasFixedSize(true)

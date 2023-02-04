@@ -12,8 +12,8 @@ class KotlinOOPFragment : Fragment() {
 
     private var _binding: FragmentKotlinOopBinding? = null
     private val binding get() = _binding!!
-    private lateinit var title: String
-    private lateinit var subTitle: String
+    private var title: String = ""
+    private var subTitle: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -17,9 +17,9 @@ class KotlinBasicFragment : Fragment() {
 
     private var _binding: FragmentKotlinBasicBinding? =null
     private val binding get() = _binding!!
-    private lateinit var kotlinBasicAdapter: KotlinBasicAdapter
-    private lateinit var title: String
-    private lateinit var subTitle: String
+    private val kotlinBasicAdapter by lazy { KotlinBasicAdapter()}
+    private var title: String = ""
+    private var subTitle: String = ""
     private var kotlinBasicData = ArrayList<LearningMaterialsItem>()
 
     override fun onCreateView(
@@ -59,7 +59,6 @@ class KotlinBasicFragment : Fragment() {
     private fun setRecyclerViewKotlinBasic() {
 
         kotlinBasicData = KotlinBasic.kotlinDasarData as ArrayList<LearningMaterialsItem>
-        kotlinBasicAdapter = KotlinBasicAdapter()
 
         binding.apply {
             kotlinBasicAdapter.setDataIntroduceKotlin(kotlinBasicData)

@@ -11,13 +11,12 @@ import com.taufik.kotlinhero.databinding.ActivitySplashscreenBinding
 
 class SplashscreenActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivitySplashscreenBinding
-    private lateinit var handler: Handler
+    private val binding by lazy { ActivitySplashscreenBinding.inflate(layoutInflater) }
+    private var handler: Handler? = null
     private val delayInMillis = 1000L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySplashscreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setSplashscreen()
@@ -27,7 +26,7 @@ class SplashscreenActivity : AppCompatActivity() {
     private fun setSplashscreen() {
 
         handler = Handler(Looper.getMainLooper())
-        handler.postDelayed({
+        handler?.postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()

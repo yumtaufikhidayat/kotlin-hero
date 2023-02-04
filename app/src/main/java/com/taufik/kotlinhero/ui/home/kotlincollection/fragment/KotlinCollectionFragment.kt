@@ -12,8 +12,8 @@ class KotlinCollectionFragment : Fragment() {
 
     private var _binding: FragmentKotlinCollectionBinding? = null
     private val binding get() = _binding!!
-    private lateinit var title: String
-    private lateinit var subTitle: String
+    private var title: String = ""
+    private var subTitle: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater,
