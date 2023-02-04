@@ -12,12 +12,11 @@ import com.taufik.kotlinhero.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityMainBinding
-    private lateinit var navController: NavController
+    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+    private var navController: NavController? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setNavHost()
@@ -30,33 +29,25 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.findNavController()
 
         binding.apply {
-            navBottom.setupWithNavController(navController)
+            navController?.let { navBottom.setupWithNavController(it) }
         }
     }
 
     private fun setUpNavigationDestination() {
-        navController.addOnDestinationChangedListener {_, destination, _ ->
+        navController?.addOnDestinationChangedListener {_, destination, _ ->
             when (destination.id) {
-                R.id.kotlinBasicFragment -> hideBottomNavigation()
-                R.id.kotlinOOPFragment -> hideBottomNavigation()
-                R.id.kotlinGenericFragment -> hideBottomNavigation()
-                R.id.kotlinCollectionFragment -> hideBottomNavigation()
-                R.id.kotlinCoroutineFragment -> hideBottomNavigation()
-                R.id.kotlinUnitTestingFragment -> hideBottomNavigation()
-                else -> showBottomNavigation()
+                R.id.kotlinBasicFragment -> isShowBottomNavigation(false)
+                R.id.kotlinOOPFragment -> isShowBottomNavigation(false)
+                R.id.kotlinGenericFragment -> isShowBottomNavigation(false)
+                R.id.kotlinCollectionFragment -> isShowBottomNavigation(false)
+                R.id.kotlinCoroutineFragment -> isShowBottomNavigation(false)
+                R.id.kotlinUnitTestingFragment -> isShowBottomNavigation(false)
+                else -> isShowBottomNavigation(true)
             }
         }
     }
 
-    private fun showBottomNavigation() {
-        binding.apply {
-            navBottom.visibility = View.VISIBLE
-        }
-    }
-
-    private fun hideBottomNavigation() {
-        binding.apply {
-            navBottom.visibility = View.GONE
-        }
+    private fun isShowBottomNavigation(isShow: Boolean) {
+        binding.navBottom.visibility = if (isShow) View.VISIBLE else View.GONE
     }
 }
