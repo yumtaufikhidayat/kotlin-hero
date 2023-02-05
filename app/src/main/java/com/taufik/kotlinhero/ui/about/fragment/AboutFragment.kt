@@ -35,10 +35,10 @@ class AboutFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setAboutAuthorData()
+        showAboutAuthor()
     }
 
-    private fun setAboutAuthorData() {
+    private fun showAboutAuthor() {
         binding.apply {
             toolbarAbout.toolbarTitle.text = getString(R.string.icAbout)
             aboutAdapter = AboutAdapter { position ->

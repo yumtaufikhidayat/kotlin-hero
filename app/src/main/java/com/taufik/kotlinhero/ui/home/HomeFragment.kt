@@ -21,6 +21,7 @@ class HomeFragment : Fragment() {
 
     private var _binding : FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
     private val homeViewModel: HomeViewModel by viewModels()
     private var referenceKotlinAdapter: ReferenceKotlinAdapter? = null
     private var courseCategoryAdapter: CourseCategoryAdapter? = null
