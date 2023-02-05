@@ -1,5 +1,7 @@
 package com.taufik.kotlinhero.ui.home
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,12 +16,13 @@ import com.taufik.kotlinhero.databinding.FragmentHomeBinding
 import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlinItem
 import com.taufik.kotlinhero.model.category.CategoryItem
 import com.taufik.kotlinhero.ui.reference.adapter.ReferenceKotlinAdapter
+import com.taufik.kotlinhero.utils.ToastUtils
 
 class HomeFragment : Fragment() {
 
     private var _binding : FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    private val referenceKotlinAdapter by lazy { ReferenceKotlinAdapter() }
+    private var referenceKotlinAdapter: ReferenceKotlinAdapter? = null
     private var categoryAdapter: CategoryAdapter? = null
     private var aboutKotlinItemData = ArrayList<AboutKotlinItem>()
     private var categoryData = ArrayList<CategoryItem>()
@@ -45,16 +48,52 @@ class HomeFragment : Fragment() {
     }
 
     private fun setRecyclerViewAboutKotlin() {
-
         aboutKotlinItemData = MainData.aboutKotlinData as ArrayList<AboutKotlinItem>
+        referenceKotlinAdapter = ReferenceKotlinAdapter { position ->
+            when (position) {
+                0 -> {
+                    try {
+                        val intent = Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse("https://kotlinlang.org/docs/home.html")
+                        )
+                        startActivity(Intent.createChooser(intent, "Open with:"))
+                    } catch (e: Exception) {
+                        ToastUtils.showToast(requireContext(), "Silakan install browser terlebih dulu")
+                    }
+                }
 
-        binding.apply {
-            referenceKotlinAdapter.setDataAboutKotlin(aboutKotlinItemData)
-            with(rvAboutKotlin) {
-                layoutManager = GridLayoutManager(requireActivity(), 3)
-                setHasFixedSize(true)
-                adapter = referenceKotlinAdapter
+                1 -> {
+                    try {
+                        val intent = Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse("https://kotlinlang.org/docs/coding-conventions.html")
+                        )
+                        startActivity(Intent.createChooser(intent, "Open with:"))
+                    } catch (e: Exception) {
+                        ToastUtils.showToast(requireContext(), "Silakan install browser terlebih dulu")
+                    }
+                }
+
+                2 -> {
+                    try {
+                        val intent = Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse("https://kotlinlang.org/docs/contribute.html")
+                        )
+                        startActivity(Intent.createChooser(intent, "Open with:"))
+                    } catch (e: Exception) {
+                        ToastUtils.showToast(requireContext(), "Silakan install browser terlebih dulu")
+                    }
+                }
             }
+        }
+        referenceKotlinAdapter?.submitList(aboutKotlinItemData)
+
+        binding.rvAboutKotlin.apply {
+            layoutManager = GridLayoutManager(requireActivity(), 3)
+            setHasFixedSize(true)
+            adapter = referenceKotlinAdapter
         }
     }
 

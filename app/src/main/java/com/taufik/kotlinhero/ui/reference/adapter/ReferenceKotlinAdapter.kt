@@ -1,118 +1,48 @@
 package com.taufik.kotlinhero.ui.reference.adapter
 
-import android.content.Intent
-import android.net.Uri
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.taufik.kotlinhero.databinding.ItemAboutKotlinBinding
 import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlinItem
 
-class ReferenceKotlinAdapter : RecyclerView.Adapter<ReferenceKotlinAdapter.MyViewHolder>() {
-
-    private val aboutKotlinList = ArrayList<AboutKotlinItem>()
-
-    fun setDataAboutKotlin(aboutKotlinItem: ArrayList<AboutKotlinItem>) {
-        aboutKotlinList.clear()
-        aboutKotlinList.addAll(aboutKotlinItem)
-        notifyDataSetChanged()
-    }
-
-    inner class MyViewHolder(private val aboutKotlinBinding: ItemAboutKotlinBinding) :
-        RecyclerView.ViewHolder(aboutKotlinBinding.root) {
-        fun bind(aboutKotlinItem: AboutKotlinItem) {
-            aboutKotlinBinding.apply {
-                imgAboutKotlin.setImageResource(aboutKotlinItem.icon)
-                tvAboutKotlinDesc.text = aboutKotlinItem.name
-            }
-        }
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view =
+class ReferenceKotlinAdapter(
+    private val onClickListener: (Int) -> Unit
+) : ListAdapter<AboutKotlinItem, ReferenceKotlinAdapter.ReferenceKotlinViewHolder>(ReferenceKotlinDiffCallback) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReferenceKotlinViewHolder {
+        return ReferenceKotlinViewHolder(
             ItemAboutKotlinBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return MyViewHolder(view)
+        )
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val pos = aboutKotlinList[position]
-        holder.bind(pos)
-        holder.itemView.setOnClickListener {
+    override fun onBindViewHolder(holder: ReferenceKotlinViewHolder, position: Int) {
+        holder.bind(getItem(position))
+    }
 
-            when (position) {
-                0 -> {
-                    try {
-                        val intent = Intent(
-                            Intent.ACTION_VIEW,
-                            Uri.parse("https://kotlinlang.org/docs/home.html")
-                        )
-                        holder.itemView.context.startActivity(
-                            Intent.createChooser(
-                                intent,
-                                "Open with:"
-                            )
-                        )
-                    } catch (e: Exception) {
-                        Toast.makeText(
-                            holder.itemView.context,
-                            "Silakan install browser terlebih dulu",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        Log.e("errorLink", "setViewModel: ${e.localizedMessage}")
-                    }
+    inner class ReferenceKotlinViewHolder(private val binding: ItemAboutKotlinBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(data: AboutKotlinItem) {
+            binding.apply {
+                imgAboutKotlin.setImageResource(data.icon)
+                tvAboutKotlinDesc.text = data.name
+                itemView.setOnClickListener {
+                    onClickListener(adapterPosition)
                 }
-
-                1 -> {
-                    try {
-                        val intent = Intent(
-                            Intent.ACTION_VIEW,
-                            Uri.parse("https://kotlinlang.org/docs/coding-conventions.html")
-                        )
-                        holder.itemView.context.startActivity(
-                            Intent.createChooser(
-                                intent,
-                                "Open with:"
-                            )
-                        )
-                    } catch (e: Exception) {
-                        Toast.makeText(
-                            holder.itemView.context,
-                            "Silakan install browser terlebih dulu",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        Log.e("errorLink", "setViewModel: ${e.localizedMessage}")
-                    }
-                }
-
-                2 -> {
-                    try {
-                        val intent = Intent(
-                            Intent.ACTION_VIEW,
-                            Uri.parse("https://kotlinlang.org/docs/contribute.html")
-                        )
-                        holder.itemView.context.startActivity(
-                            Intent.createChooser(
-                                intent,
-                                "Open with:"
-                            )
-                        )
-                    } catch (e: Exception) {
-                        Toast.makeText(
-                            holder.itemView.context,
-                            "Silakan install browser terlebih dulu",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        Log.e("errorLink", "setViewModel: ${e.localizedMessage}")
-                    }
-                }
-
-                else -> Toast.makeText(holder.itemView.context, "Else toast", Toast.LENGTH_SHORT)
-                    .show()
             }
         }
     }
 
-    override fun getItemCount(): Int = aboutKotlinList.size
+    object ReferenceKotlinDiffCallback: DiffUtil.ItemCallback<AboutKotlinItem>() {
+        override fun areItemsTheSame(
+            oldItem: AboutKotlinItem,
+            newItem: AboutKotlinItem
+        ): Boolean  = oldItem.name == newItem.name
+
+        override fun areContentsTheSame(
+            oldItem: AboutKotlinItem,
+            newItem: AboutKotlinItem
+        ): Boolean = oldItem == newItem
+    }
 }
