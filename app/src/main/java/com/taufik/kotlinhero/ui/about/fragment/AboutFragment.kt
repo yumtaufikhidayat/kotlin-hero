@@ -21,7 +21,7 @@ class AboutFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: AboutViewModel by viewModels()
-    private lateinit var aboutAdapter: AboutAdapter
+    private var aboutAdapter: AboutAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -92,7 +92,7 @@ class AboutFragment : Fragment() {
                 }
             }
 
-            aboutAdapter.setAboutAuthorData(viewModel.getAboutAuthor())
+            aboutAdapter?.submitList(viewModel.getAboutAuthor())
             with(rvAbout) {
                 layoutManager = LinearLayoutManager(requireContext())
                 setHasFixedSize(true)
