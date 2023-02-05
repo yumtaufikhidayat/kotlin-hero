@@ -15,7 +15,7 @@ object MainData {
         )
 
     // Main Category
-    val categoryTutorialData: List<CategoryItem>
+    val courseCategoryData: List<CategoryItem>
         get() = mutableListOf(
             CategoryItem(R.drawable.kotlin_logos,"Tutorial Kotlin Dasar", "42 Materi"),
             CategoryItem(R.drawable.kotlin_logos,"Tutorial Kotlin OOP", "51 Materi"),
