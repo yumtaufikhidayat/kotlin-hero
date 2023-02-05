@@ -23,7 +23,7 @@ class HomeFragment : Fragment() {
     private var _binding : FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private var referenceKotlinAdapter: ReferenceKotlinAdapter? = null
-    private var categoryAdapter: CategoryAdapter? = null
+    private var courseCategoryAdapter: CourseCategoryAdapter? = null
     private var aboutKotlinItemData = ArrayList<AboutKotlinItem>()
     private var categoryData = ArrayList<CategoryItem>()
 
@@ -97,10 +97,10 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun setRecyclerViewCategory() = with(binding) {
+    private fun setRecyclerViewCategory() {
 
         categoryData = MainData.categoryTutorialData as ArrayList<CategoryItem>
-        categoryAdapter = CategoryAdapter { categoryItem, position ->
+        courseCategoryAdapter = CourseCategoryAdapter { categoryItem, position ->
             val bundle = bundleOf(
                 EXTRA_TITLE to categoryItem.categoryName,
                 EXTRA_SUBTITLE to categoryItem.categoryNumber
@@ -115,12 +115,12 @@ class HomeFragment : Fragment() {
                 5 -> findNavController().navigate(R.id.kotlinUnitTestingFragment, bundle)
             }
         }
+        courseCategoryAdapter?.submitList(categoryData)
 
-        categoryAdapter?.setDataCategoryList(categoryData)
-        with(rvCategory) {
+        binding.rvCategory.apply {
             layoutManager = GridLayoutManager(requireActivity(), 2)
             setHasFixedSize(true)
-            adapter = categoryAdapter
+            adapter = courseCategoryAdapter
         }
     }
 
