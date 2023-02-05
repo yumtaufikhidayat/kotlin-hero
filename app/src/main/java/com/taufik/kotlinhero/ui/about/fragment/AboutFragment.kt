@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,6 +13,7 @@ import com.taufik.kotlinhero.R
 import com.taufik.kotlinhero.databinding.FragmentAboutBinding
 import com.taufik.kotlinhero.ui.about.adapter.AboutAdapter
 import com.taufik.kotlinhero.ui.about.viewmodel.AboutViewModel
+import com.taufik.kotlinhero.utils.ToastUtils
 
 class AboutFragment : Fragment() {
 
@@ -50,11 +50,7 @@ class AboutFragment : Fragment() {
                             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(urlLink))
                             startActivity(Intent.createChooser(intent, "Open with:"))
                         } catch (e: Exception) {
-                            Toast.makeText(
-                                requireContext(),
-                                "Silakan install browser terlebih dulu",
-                                Toast.LENGTH_SHORT
-                            ).show()
+                            ToastUtils.showToast(requireContext(), "Silakan install browser terlebih dulu")
                         }
                     }
 
@@ -64,11 +60,7 @@ class AboutFragment : Fragment() {
                             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(githubLink))
                             startActivity(Intent.createChooser(intent, "Open with:"))
                         } catch (e: Exception) {
-                            Toast.makeText(
-                                requireContext(),
-                                "Silakan install browser terlebih dulu",
-                                Toast.LENGTH_SHORT
-                            ).show()
+                            ToastUtils.showToast(requireContext(), "Silakan install browser terlebih dulu")
                         }
                     }
 
@@ -82,11 +74,7 @@ class AboutFragment : Fragment() {
                             }
                             startActivity(Intent.createChooser(intentEmail, "Send email"))
                         } catch (e: java.lang.Exception) {
-                            Toast.makeText(
-                                requireContext(),
-                                "Silakan install browser terlebih dulu",
-                                Toast.LENGTH_SHORT
-                            ).show()
+                            ToastUtils.showToast(requireContext(), "Silakan install browser terlebih dulu")
                         }
                     }
                 }
