@@ -8,13 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.taufik.kotlinhero.R
-import com.taufik.kotlinhero.data.MainData
 import com.taufik.kotlinhero.databinding.FragmentHomeBinding
-import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlinItem
-import com.taufik.kotlinhero.model.category.CategoryItem
+import com.taufik.kotlinhero.ui.home.viewmodel.HomeViewModel
 import com.taufik.kotlinhero.ui.reference.adapter.ReferenceKotlinAdapter
 import com.taufik.kotlinhero.utils.ToastUtils
 
@@ -22,10 +21,9 @@ class HomeFragment : Fragment() {
 
     private var _binding : FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private val homeViewModel: HomeViewModel by viewModels()
     private var referenceKotlinAdapter: ReferenceKotlinAdapter? = null
     private var courseCategoryAdapter: CourseCategoryAdapter? = null
-    private var aboutKotlinItemData = ArrayList<AboutKotlinItem>()
-    private var categoryData = ArrayList<CategoryItem>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -43,12 +41,11 @@ class HomeFragment : Fragment() {
     }
 
     private fun setRecyclerViewLayout() {
-        setRecyclerViewAboutKotlin()
-        setRecyclerViewCategory()
+        showAboutCategory()
+        showCourseCategory()
     }
 
-    private fun setRecyclerViewAboutKotlin() {
-        aboutKotlinItemData = MainData.aboutKotlinData as ArrayList<AboutKotlinItem>
+    private fun showAboutCategory() {
         referenceKotlinAdapter = ReferenceKotlinAdapter { position ->
             when (position) {
                 0 -> {
@@ -88,7 +85,7 @@ class HomeFragment : Fragment() {
                 }
             }
         }
-        referenceKotlinAdapter?.submitList(aboutKotlinItemData)
+        referenceKotlinAdapter?.submitList(homeViewModel.showReferenceData())
 
         binding.rvAboutKotlin.apply {
             layoutManager = GridLayoutManager(requireActivity(), 3)
@@ -97,9 +94,7 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun setRecyclerViewCategory() {
-
-        categoryData = MainData.categoryTutorialData as ArrayList<CategoryItem>
+    private fun showCourseCategory() {
         courseCategoryAdapter = CourseCategoryAdapter { categoryItem, position ->
             val bundle = bundleOf(
                 EXTRA_TITLE to categoryItem.categoryName,
@@ -115,7 +110,7 @@ class HomeFragment : Fragment() {
                 5 -> findNavController().navigate(R.id.kotlinUnitTestingFragment, bundle)
             }
         }
-        courseCategoryAdapter?.submitList(categoryData)
+        courseCategoryAdapter?.submitList(homeViewModel.showCourseCategory())
 
         binding.rvCategory.apply {
             layoutManager = GridLayoutManager(requireActivity(), 2)
