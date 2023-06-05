@@ -4,6 +4,7 @@ plugins {
     id 'androidx.navigation.safeargs'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -59,16 +60,23 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$junitExtversion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
 
-    // Libs
-//    implementation files('libs/YouTubeAndroidPlayerApi.jar')
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     // View Model
     implementation "androidx.lifecycle:lifecycle-extensions:$lifeCycleVersion"
-    implementation "androidx.lifecycle:lifecycle-common-java8:$lifeCycleJava8Support"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeCycleVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifeCycleVersion"
+
+    // Retrofit + OkHttp
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
 
     // Glide
     implementation "com.github.bumptech.glide:glide:$glideVersion"
+
+    // Navigation component
+    implementation "androidx.navigation:navigation-fragment-ktx:$navKTXVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navKTXVersion"
 
     // Circle image view
     implementation "de.hdodenhof:circleimageview:$circleImageVersion"
@@ -85,4 +93,11 @@ dependencies {
     // Coroutine
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineCoreVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineAndroidVersion"
+
+    // Android KTX
+    implementation "androidx.fragment:fragment-ktx:$androidKTXVersion"
+
+    // Hilt
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-compiler:$hiltVersion"
 }
