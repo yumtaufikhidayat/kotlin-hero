@@ -15,7 +15,7 @@ import com.taufik.kotlinhero.databinding.FragmentHomeBinding
 import com.taufik.kotlinhero.model.response.ListCoursesItem
 import com.taufik.kotlinhero.ui.home.adapter.CourseCategoryAdapter
 import com.taufik.kotlinhero.ui.home.viewmodel.HomeViewModel
-import com.taufik.kotlinhero.ui.reference.adapter.ReferenceKotlinAdapter
+import com.taufik.kotlinhero.ui.home.adapter.ReferenceKotlinAdapter
 import com.taufik.kotlinhero.utils.ToastUtils
 import dagger.hilt.android.AndroidEntryPoint
 

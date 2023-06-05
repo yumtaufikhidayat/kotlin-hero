@@ -1,4 +1,4 @@
-package com.taufik.kotlinhero.ui.reference.adapter
+package com.taufik.kotlinhero.ui.home.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -10,7 +10,9 @@ import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlinItem
 
 class ReferenceKotlinAdapter(
     private val onClickListener: (Int) -> Unit
-) : ListAdapter<AboutKotlinItem, ReferenceKotlinAdapter.ReferenceKotlinViewHolder>(ReferenceKotlinDiffCallback) {
+) : ListAdapter<AboutKotlinItem, ReferenceKotlinAdapter.ReferenceKotlinViewHolder>(
+    ReferenceKotlinDiffCallback
+) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReferenceKotlinViewHolder {
         return ReferenceKotlinViewHolder(
             ItemAboutKotlinBinding.inflate(LayoutInflater.from(parent.context), parent, false)
