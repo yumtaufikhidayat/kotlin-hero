@@ -1,4 +1,4 @@
-package com.taufik.kotlinhero.ui.home.kotlinbasic.adapter
+package com.taufik.kotlinhero.ui.listcourses.adapter
 
 import android.content.Intent
 import android.net.Uri

@@ -1,4 +1,4 @@
-package com.taufik.kotlinhero.ui.home
+package com.taufik.kotlinhero.ui.home.adapter
 
 import android.os.Bundle
 import android.view.LayoutInflater

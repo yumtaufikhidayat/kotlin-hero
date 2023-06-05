@@ -1,7 +1,7 @@
 package com.taufik.kotlinhero.data
 
 import com.taufik.kotlinhero.R
-import com.taufik.kotlinhero.data.source.local.About
+import com.taufik.kotlinhero.data.local.About
 import com.taufik.kotlinhero.model.aboutkotlin.AboutKotlinItem
 import com.taufik.kotlinhero.model.category.CategoryItem
 

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:scrollbars="none"
     android:overScrollMode="never"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.fragment.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -69,7 +69,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCategory"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginHorizontal="8dp"
             android:scrollbars="none"
             android:overScrollMode="never"

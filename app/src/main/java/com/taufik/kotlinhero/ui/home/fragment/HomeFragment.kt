@@ -1,4 +1,4 @@
-package com.taufik.kotlinhero.ui.home
+package com.taufik.kotlinhero.ui.home.fragment
 
 import android.content.Intent
 import android.net.Uri
@@ -6,17 +6,20 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.taufik.kotlinhero.R
+import com.taufik.kotlinhero.data.NetworkResult
 import com.taufik.kotlinhero.databinding.FragmentHomeBinding
+import com.taufik.kotlinhero.model.response.ListCoursesItem
+import com.taufik.kotlinhero.ui.home.adapter.CourseCategoryAdapter
 import com.taufik.kotlinhero.ui.home.viewmodel.HomeViewModel
 import com.taufik.kotlinhero.ui.reference.adapter.ReferenceKotlinAdapter
 import com.taufik.kotlinhero.utils.ToastUtils
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private var _binding : FragmentHomeBinding? = null
@@ -38,12 +41,8 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setRecyclerViewLayout()
-    }
-
-    private fun setRecyclerViewLayout() {
         showAboutCategory()
-        showCourseCategory()
+        setCategoryObserver()
     }
 
     private fun showAboutCategory() {
@@ -63,29 +62,33 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun showCourseCategory() {
-        courseCategoryAdapter = CourseCategoryAdapter { categoryItem, position ->
-            val bundle = bundleOf(
-                EXTRA_TITLE to categoryItem.categoryName,
-                EXTRA_SUBTITLE to categoryItem.categoryNumber
-            )
-
-            when (position) {
-                0 -> findNavController().navigate(R.id.kotlinBasicFragment, bundle)
-                1 -> findNavController().navigate(R.id.kotlinOOPFragment, bundle)
-                2 -> findNavController().navigate(R.id.kotlinGenericFragment, bundle)
-                3 -> findNavController().navigate(R.id.kotlinCollectionFragment, bundle)
-                4 -> findNavController().navigate(R.id.kotlinCoroutineFragment, bundle)
-                5 -> findNavController().navigate(R.id.kotlinUnitTestingFragment, bundle)
+    private fun setCategoryObserver() {
+        homeViewModel.getAllListCourses().observe(viewLifecycleOwner) {
+            when(it) {
+                is NetworkResult.Loading -> {}
+                is NetworkResult.Success -> {
+                    showCourseCategory(it.data)
+                }
+                is NetworkResult.Error -> {}
+                is NetworkResult.ServerError -> {}
+                is NetworkResult.Unauthorized -> {}
             }
         }
-        courseCategoryAdapter?.submitList(homeViewModel.showCourseCategory())
+    }
+
+    private fun showCourseCategory(data: ArrayList<ListCoursesItem>) {
+        courseCategoryAdapter = CourseCategoryAdapter { categoryItem, position ->
+            Toast.makeText(requireContext(), "Posisi $position, \n${categoryItem.name}\n${data[position].name}", Toast.LENGTH_SHORT).show()
+        }
 
         binding.rvCategory.apply {
             layoutManager = GridLayoutManager(requireActivity(), 2)
+            isNestedScrollingEnabled = false
             setHasFixedSize(true)
             adapter = courseCategoryAdapter
         }
+
+        courseCategoryAdapter?.submitList(data)
     }
 
     private fun openBrowser(url: String) {

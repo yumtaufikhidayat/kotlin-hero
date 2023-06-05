@@ -1,4 +1,4 @@
-package com.taufik.kotlinhero.ui.home.kotlinbasic.fragment
+package com.taufik.kotlinhero.ui.listcourses.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,15 +9,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.taufik.kotlinhero.data.KotlinBasic
 import com.taufik.kotlinhero.databinding.FragmentKotlinBasicBinding
 import com.taufik.kotlinhero.model.learningmaterials.LearningMaterialsItem
-import com.taufik.kotlinhero.ui.home.HomeFragment.Companion.EXTRA_SUBTITLE
-import com.taufik.kotlinhero.ui.home.HomeFragment.Companion.EXTRA_TITLE
-import com.taufik.kotlinhero.ui.home.kotlinbasic.adapter.KotlinBasicAdapter
+import com.taufik.kotlinhero.ui.home.fragment.HomeFragment.Companion.EXTRA_SUBTITLE
+import com.taufik.kotlinhero.ui.home.fragment.HomeFragment.Companion.EXTRA_TITLE
+import com.taufik.kotlinhero.ui.listcourses.adapter.KotlinBasicAdapter
 
 class KotlinBasicFragment : Fragment() {
 
     private var _binding: FragmentKotlinBasicBinding? =null
     private val binding get() = _binding!!
-    private val kotlinBasicAdapter by lazy { KotlinBasicAdapter()}
+    private val kotlinBasicAdapter by lazy { KotlinBasicAdapter() }
     private var title: String = ""
     private var subTitle: String = ""
     private var kotlinBasicData = ArrayList<LearningMaterialsItem>()

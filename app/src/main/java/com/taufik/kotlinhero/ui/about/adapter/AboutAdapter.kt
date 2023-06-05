@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.taufik.kotlinhero.data.source.local.About
+import com.taufik.kotlinhero.data.local.About
 import com.taufik.kotlinhero.databinding.ItemAboutBinding
 
 class AboutAdapter(

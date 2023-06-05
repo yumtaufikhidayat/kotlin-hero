@@ -1,4 +1,4 @@
-package com.taufik.kotlinhero.data.source.local
+package com.taufik.kotlinhero.data.local
 
 data class About(
     val icon: Int,

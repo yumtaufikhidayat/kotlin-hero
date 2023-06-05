@@ -25,6 +25,7 @@
     <string name="tvSubtitle">2 Materi</string>
     <string name="tvAskToLearnToday">Mau belajar apa hari ini?</string>
     <string name="tvTitle">Tutorial Kotlin Dasar</string>
+    <string name="tvCoursesNumber">%1$s Materi</string>
 
     <!--Bottom Menu-->
     <string name="icHome">Beranda</string>
