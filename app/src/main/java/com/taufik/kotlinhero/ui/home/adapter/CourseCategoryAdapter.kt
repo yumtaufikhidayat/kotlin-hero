@@ -7,22 +7,22 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.taufik.kotlinhero.R
 import com.taufik.kotlinhero.databinding.ItemCategoryBinding
-import com.taufik.kotlinhero.model.response.ListCoursesItem
+import com.taufik.kotlinhero.model.response.ListCategoriesData
 
 class CourseCategoryAdapter(
-    val clickListener: (ListCoursesItem, Int) -> Unit
-) : ListAdapter<ListCoursesItem, CourseCategoryAdapter.MyViewHolder>(CourseCategoryDiffCallback) {
+    val clickListener: (ListCategoriesData) -> Unit
+) : ListAdapter<ListCategoriesData, CourseCategoryAdapter.MyViewHolder>(CourseCategoryDiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(ItemCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bind(getItem(position), position)
+        holder.bind(getItem(position))
     }
 
     inner class MyViewHolder(val binding: ItemCategoryBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(data: ListCoursesItem, position: Int) {
+        fun bind(data: ListCategoriesData) {
             binding.apply {
                 tvCategoryName.text = data.name
                 tvCategoryNumber.text = itemView.context.getString(
@@ -34,21 +34,21 @@ class CourseCategoryAdapter(
                 )
 
                 itemView.setOnClickListener {
-                    clickListener(data, position)
+                    clickListener(data)
                 }
             }
         }
     }
 
-    object CourseCategoryDiffCallback: DiffUtil.ItemCallback<ListCoursesItem>() {
+    object CourseCategoryDiffCallback: DiffUtil.ItemCallback<ListCategoriesData>() {
         override fun areItemsTheSame(
-            oldItem: ListCoursesItem,
-            newItem: ListCoursesItem
+            oldItem: ListCategoriesData,
+            newItem: ListCategoriesData
         ): Boolean = oldItem.id == newItem.id
 
         override fun areContentsTheSame(
-            oldItem: ListCoursesItem,
-            newItem: ListCoursesItem
+            oldItem: ListCategoriesData,
+            newItem: ListCategoriesData
         ): Boolean = oldItem == newItem
     }
 }

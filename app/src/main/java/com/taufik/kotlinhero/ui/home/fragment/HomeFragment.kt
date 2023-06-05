@@ -13,7 +13,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.taufik.kotlinhero.data.NetworkResult
 import com.taufik.kotlinhero.databinding.FragmentHomeBinding
-import com.taufik.kotlinhero.model.response.ListCoursesItem
+import com.taufik.kotlinhero.model.response.ListCategoriesData
 import com.taufik.kotlinhero.ui.home.adapter.CourseCategoryAdapter
 import com.taufik.kotlinhero.ui.home.viewmodel.HomeViewModel
 import com.taufik.kotlinhero.ui.home.adapter.ReferenceKotlinAdapter
@@ -89,9 +89,9 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun showCourseCategory(data: ArrayList<ListCoursesItem>) {
-        courseCategoryAdapter = CourseCategoryAdapter { categoryItem, position ->
-            Toast.makeText(requireContext(), "${categoryItem.name}\n${data[position].name}", Toast.LENGTH_SHORT).show()
+    private fun showCourseCategory(data: List<ListCategoriesData>) {
+        courseCategoryAdapter = CourseCategoryAdapter { categoryItem ->
+            Toast.makeText(requireContext(), categoryItem.name, Toast.LENGTH_SHORT).show()
         }
 
         binding.rvCategory.apply {
