@@ -49,41 +49,9 @@ class HomeFragment : Fragment() {
     private fun showAboutCategory() {
         referenceKotlinAdapter = ReferenceKotlinAdapter { position ->
             when (position) {
-                0 -> {
-                    try {
-                        val intent = Intent(
-                            Intent.ACTION_VIEW,
-                            Uri.parse("https://kotlinlang.org/docs/home.html")
-                        )
-                        startActivity(Intent.createChooser(intent, "Open with:"))
-                    } catch (e: Exception) {
-                        ToastUtils.showToast(requireContext(), "Silakan install browser terlebih dulu")
-                    }
-                }
-
-                1 -> {
-                    try {
-                        val intent = Intent(
-                            Intent.ACTION_VIEW,
-                            Uri.parse("https://kotlinlang.org/docs/coding-conventions.html")
-                        )
-                        startActivity(Intent.createChooser(intent, "Open with:"))
-                    } catch (e: Exception) {
-                        ToastUtils.showToast(requireContext(), "Silakan install browser terlebih dulu")
-                    }
-                }
-
-                2 -> {
-                    try {
-                        val intent = Intent(
-                            Intent.ACTION_VIEW,
-                            Uri.parse("https://kotlinlang.org/docs/contribute.html")
-                        )
-                        startActivity(Intent.createChooser(intent, "Open with:"))
-                    } catch (e: Exception) {
-                        ToastUtils.showToast(requireContext(), "Silakan install browser terlebih dulu")
-                    }
-                }
+                0 -> openBrowser("https://kotlinlang.org/docs/home.html")
+                1 -> openBrowser("https://kotlinlang.org/docs/coding-conventions.html")
+                2 -> openBrowser("https://kotlinlang.org/docs/contribute.html")
             }
         }
         referenceKotlinAdapter?.submitList(homeViewModel.showReferenceData())
@@ -120,6 +88,18 @@ class HomeFragment : Fragment() {
         }
     }
 
+    private fun openBrowser(url: String) {
+        try {
+            val intent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse(url)
+            )
+            startActivity(Intent.createChooser(intent, "Buka dengan"))
+        } catch (e: Exception) {
+            ToastUtils.showToast(requireContext(), "Silakan install browser terlebih dulu")
+        }
+    }
+    
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

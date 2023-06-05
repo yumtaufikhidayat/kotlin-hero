@@ -4,9 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Kotlin_Hero.iml" filepath="$PROJECT_DIR$/.idea/modules/Kotlin_Hero.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kotlin_Hero.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kotlin_Hero.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kotlin_Hero.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kotlin_Hero.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kotlin_Hero.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kotlin_Hero.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kotlin_Hero.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kotlin_Hero.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.Kotlin_Hero.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.Kotlin_Hero.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.Kotlin_Hero.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.Kotlin_Hero.app.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.Kotlin_Hero.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.Kotlin_Hero.app.unitTest.iml" />
