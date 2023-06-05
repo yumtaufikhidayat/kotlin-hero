@@ -39,11 +39,6 @@ class MainActivity : AppCompatActivity() {
         navController?.addOnDestinationChangedListener {_, destination, _ ->
             when (destination.id) {
                 R.id.kotlinBasicFragment -> isShowBottomNavigation(false)
-                R.id.kotlinOOPFragment -> isShowBottomNavigation(false)
-                R.id.kotlinGenericFragment -> isShowBottomNavigation(false)
-                R.id.kotlinCollectionFragment -> isShowBottomNavigation(false)
-                R.id.kotlinCoroutineFragment -> isShowBottomNavigation(false)
-                R.id.kotlinUnitTestingFragment -> isShowBottomNavigation(false)
                 else -> isShowBottomNavigation(true)
             }
         }

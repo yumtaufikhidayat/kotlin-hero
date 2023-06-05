@@ -11,7 +11,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp">
 
         <View
             android:id="@+id/viewBackground"
@@ -81,6 +81,47 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/cardAbout"
             app:layout_constraintEnd_toEndOf="@id/cardAbout"/>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvAskToLearnToday"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <include
+                layout="@layout/layout_loading"/>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:text="@string/tvResultsNotFound"
+            android:textAlignment="center"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintTop_toTopOf="@id/rvCategory"
+            app:layout_constraintBottom_toBottomOf="@id/rvCategory"
+            app:layout_constraintStart_toStartOf="@id/rvCategory"
+            app:layout_constraintEnd_toEndOf="@id/rvCategory"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_round_button"
+            android:layout_marginTop="8dp"
+            android:text="@string/tvRetry"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/tvError"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

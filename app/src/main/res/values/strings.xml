@@ -26,6 +26,10 @@
     <string name="tvAskToLearnToday">Mau belajar apa hari ini?</string>
     <string name="tvTitle">Tutorial Kotlin Dasar</string>
     <string name="tvCoursesNumber">%1$s Materi</string>
+    <string name="tvOops">Oops!. Terjadi Kesalahan…</string>
+    <string name="tvRetry">Coba Lagi</string>
+    <string name="tvResultCouldNotBeLoaded">Hasil Gagal Dimuat</string>
+    <string name="tvResultsNotFound">Hasil Tidak Ditemukan</string>
 
     <!--Bottom Menu-->
     <string name="icHome">Beranda</string>

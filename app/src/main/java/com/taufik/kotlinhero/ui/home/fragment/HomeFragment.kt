@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
@@ -65,20 +66,32 @@ class HomeFragment : Fragment() {
     private fun setCategoryObserver() {
         homeViewModel.getAllListCourses().observe(viewLifecycleOwner) {
             when(it) {
-                is NetworkResult.Loading -> {}
+                is NetworkResult.Loading -> {
+                    showLoading(true)
+                    showError(false, "")
+                }
                 is NetworkResult.Success -> {
+                    showLoading(false)
+                    showError(false, "")
                     showCourseCategory(it.data)
                 }
-                is NetworkResult.Error -> {}
-                is NetworkResult.ServerError -> {}
-                is NetworkResult.Unauthorized -> {}
+                is NetworkResult.Error -> {
+                    showLoading(false)
+                    showError(true, it.error)
+                }
+                is NetworkResult.ServerError -> {
+                    showLoading(false)
+                    showError(true, it.error)}
+                is NetworkResult.Unauthorized -> {
+                    showLoading(false)
+                    showError(true, it.error)}
             }
         }
     }
 
     private fun showCourseCategory(data: ArrayList<ListCoursesItem>) {
         courseCategoryAdapter = CourseCategoryAdapter { categoryItem, position ->
-            Toast.makeText(requireContext(), "Posisi $position, \n${categoryItem.name}\n${data[position].name}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "${categoryItem.name}\n${data[position].name}", Toast.LENGTH_SHORT).show()
         }
 
         binding.rvCategory.apply {
@@ -89,6 +102,22 @@ class HomeFragment : Fragment() {
         }
 
         courseCategoryAdapter?.submitList(data)
+    }
+
+    private fun showLoading(isShow: Boolean) {
+        binding.shimmerCategory.isVisible = isShow
+    }
+
+    private fun showError(isShow: Boolean, message: String) {
+        binding.apply {
+            tvError.isVisible = isShow
+            btnRetry.isVisible = isShow
+
+            tvError.text = message
+            btnRetry.setOnClickListener {
+                setCategoryObserver()
+            }
+        }
     }
 
     private fun openBrowser(url: String) {
